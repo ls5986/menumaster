@@ -1,4 +1,4 @@
-import { Zap, BookOpen, Edit3, ListChecks, Target, Trophy, Users } from 'lucide-react';
+import { Zap, BookOpen, Edit3, Trophy, Users } from 'lucide-react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';

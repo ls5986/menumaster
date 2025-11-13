@@ -162,38 +162,38 @@ export function QuickFire({
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="max-w-2xl mx-auto"
+        className="max-w-2xl mx-auto px-4 sm:px-6"
       >
-        <Card className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Round Complete! 🎉</h2>
-          <div className="text-6xl mb-6">
+        <Card className="text-center p-4 sm:p-6">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Round Complete! 🎉</h2>
+          <div className="text-5xl sm:text-6xl mb-4 sm:mb-6">
             {sessionScore === questions.length ? '💯' : sessionScore >= questions.length * 0.8 ? '🌟' : '👍'}
           </div>
-          <div className="grid grid-cols-3 gap-4 mb-8">
+          <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8">
             <div>
-              <p className="text-text-secondary text-sm">Score</p>
-              <p className="text-3xl font-bold text-accent-gold">
+              <p className="text-text-secondary text-xs sm:text-sm">Score</p>
+              <p className="text-xl sm:text-3xl font-bold text-accent-gold">
                 {sessionScore}/{questions.length}
               </p>
             </div>
             <div>
-              <p className="text-text-secondary text-sm">Accuracy</p>
-              <p className="text-3xl font-bold text-correct">
+              <p className="text-text-secondary text-xs sm:text-sm">Accuracy</p>
+              <p className="text-xl sm:text-3xl font-bold text-correct">
                 {Math.round((sessionScore / questions.length) * 100)}%
               </p>
             </div>
             <div>
-              <p className="text-text-secondary text-sm">Time</p>
-              <p className="text-3xl font-bold text-info">
+              <p className="text-text-secondary text-xs sm:text-sm">Time</p>
+              <p className="text-xl sm:text-3xl font-bold text-info">
                 {Math.round((Date.now() - startTime) / 1000)}s
               </p>
             </div>
           </div>
-          <div className="flex gap-3 justify-center">
-            <Button variant="primary" onClick={() => window.location.reload()}>
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center">
+            <Button variant="primary" onClick={() => window.location.reload()} className="w-full sm:w-auto">
               Play Again
             </Button>
-            <Button variant="secondary" onClick={onComplete}>
+            <Button variant="secondary" onClick={onComplete} className="w-full sm:w-auto">
               Back to Home
             </Button>
           </div>
@@ -203,12 +203,12 @@ export function QuickFire({
   }
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto px-4 sm:px-6">
       {/* Header Stats */}
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-4">
-          <span className="text-text-secondary">
-            Question {currentIndex + 1}/{questions.length}
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 sm:mb-6 gap-2">
+        <div className="flex items-center gap-2 sm:gap-4">
+          <span className="text-text-secondary text-sm sm:text-base">
+            Q {currentIndex + 1}/{questions.length}
           </span>
           {user.currentSessionStreak > 0 && (
             <div className="flex items-center gap-1 px-2 py-1 bg-accent-red/20 rounded-full">
@@ -223,7 +223,7 @@ export function QuickFire({
       </div>
 
       {/* Progress bar */}
-      <ProgressBar progress={progress} className="mb-8" />
+      <ProgressBar progress={progress} className="mb-4 sm:mb-8" />
 
       {/* Question Card */}
       <motion.div
@@ -232,19 +232,19 @@ export function QuickFire({
         animate={{ x: 0, opacity: 1 }}
         transition={{ type: 'spring', stiffness: 100 }}
       >
-        <Card>
+        <Card className="p-4 sm:p-6">
           {/* Item name */}
-          <div className="mb-4">
-            <h3 className="text-2xl font-bold text-accent-gold mb-1">
+          <div className="mb-3 sm:mb-4">
+            <h3 className="text-lg sm:text-2xl font-bold text-accent-gold mb-1">
               {currentQuestion.itemName}
             </h3>
-            <p className="text-text-secondary text-sm">{currentQuestion.category}</p>
+            <p className="text-text-secondary text-xs sm:text-sm">{currentQuestion.category}</p>
           </div>
 
           {/* Question - Full Context */}
-          <div className="mb-6">
-            <div className="bg-bg-tertiary/30 rounded-lg p-6 border-l-4 border-accent-gold">
-              <p className="text-xl text-text-primary leading-relaxed font-medium mb-4">
+          <div className="mb-4 sm:mb-6">
+            <div className="bg-bg-tertiary/30 rounded-lg p-3 sm:p-6 border-l-4 border-accent-gold">
+              <p className="text-base sm:text-xl text-text-primary leading-relaxed font-medium mb-3 sm:mb-4">
                 {currentQuestion.component.underline_text}
               </p>
               {currentQuestion.component.individual_blanks && currentQuestion.component.individual_blanks.length > 0 && (
@@ -271,20 +271,21 @@ export function QuickFire({
               type="text"
               value={userAnswer}
               onChange={(e) => setUserAnswer(e.target.value)}
-              placeholder={`Type your answer (${currentQuestion.component.answer.split(' ').length} words)...`}
-              className="w-full bg-bg-tertiary text-text-primary rounded-lg px-4 py-3 mb-4 focus:outline-none focus:ring-2 focus:ring-accent-gold"
+              placeholder="Type your answer..."
+              className="w-full bg-bg-tertiary text-text-primary rounded-lg px-3 sm:px-4 py-3 sm:py-4 mb-3 sm:mb-4 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-accent-gold touch-manipulation"
               autoComplete="off"
             />
           </form>
 
           {/* Hint */}
           {currentQuestion.component.hint && (
-            <div className="mb-4">
+            <div className="mb-3 sm:mb-4">
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={toggleHint}
                 icon={<Lightbulb size={16} />}
+                className="text-xs sm:text-sm"
               >
                 {showHint ? 'Hide Hint' : 'Show Hint'}
               </Button>
@@ -292,22 +293,22 @@ export function QuickFire({
                 <motion.div
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
-                  className="mt-2 p-3 bg-info/10 border border-info/30 rounded-lg"
+                  className="mt-2 p-2 sm:p-3 bg-info/10 border border-info/30 rounded-lg"
                 >
-                  <p className="text-sm text-info">💡 {currentQuestion.component.hint}</p>
+                  <p className="text-xs sm:text-sm text-info">💡 {currentQuestion.component.hint}</p>
                 </motion.div>
               )}
             </div>
           )}
 
           {/* Action buttons */}
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
             <Button
               variant="secondary"
               size="md"
               onClick={handleSkip}
-              icon={<SkipForward size={18} />}
-              className="flex-1"
+              icon={<SkipForward size={16} />}
+              className="flex-1 text-sm sm:text-base py-3 sm:py-2"
             >
               Skip
             </Button>
@@ -316,8 +317,8 @@ export function QuickFire({
               size="md"
               onClick={handleSubmit}
               disabled={!userAnswer.trim()}
-              icon={<Send size={18} />}
-              className="flex-1"
+              icon={<Send size={16} />}
+              className="flex-1 text-sm sm:text-base py-3 sm:py-2"
             >
               Submit
             </Button>

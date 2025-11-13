@@ -27,52 +27,52 @@ export function Home({ onStartStudy }: HomeProps) {
   ).slice(-3);
 
   return (
-    <div className="max-w-6xl mx-auto space-y-8">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-6 sm:space-y-8">
       {/* Welcome Section */}
       <div>
-        <h1 className="text-4xl font-bold mb-2">
+        <h1 className="text-2xl sm:text-4xl font-bold mb-2">
           Welcome back! 👋
         </h1>
-        <p className="text-text-secondary">
+        <p className="text-sm sm:text-base text-text-secondary">
           Ready to master the Mastro's menu?
         </p>
       </div>
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <Card>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+        <Card className="p-3 sm:p-4">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-text-secondary text-sm">Level</p>
-              <p className="text-3xl font-bold text-accent-gold">{user.level}</p>
+              <p className="text-text-secondary text-xs sm:text-sm">Level</p>
+              <p className="text-2xl sm:text-3xl font-bold text-accent-gold">{user.level}</p>
             </div>
-            <Trophy className="text-accent-gold" size={32} />
+            <Trophy className="text-accent-gold" size={24} />
           </div>
         </Card>
 
-        <Card>
+        <Card className="p-3 sm:p-4">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-text-secondary text-sm">Streak</p>
-              <p className="text-3xl font-bold text-accent-red">{user.streakDays} 🔥</p>
-            </div>
-          </div>
-        </Card>
-
-        <Card>
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-text-secondary text-sm">Questions</p>
-              <p className="text-3xl font-bold text-info">{user.totalQuestionsAnswered}</p>
+              <p className="text-text-secondary text-xs sm:text-sm">Streak</p>
+              <p className="text-2xl sm:text-3xl font-bold text-accent-red">{user.streakDays} 🔥</p>
             </div>
           </div>
         </Card>
 
-        <Card>
+        <Card className="p-3 sm:p-4">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-text-secondary text-sm">Achievements</p>
-              <p className="text-3xl font-bold text-correct">{user.achievements.length}</p>
+              <p className="text-text-secondary text-xs sm:text-sm">Questions</p>
+              <p className="text-2xl sm:text-3xl font-bold text-info">{user.totalQuestionsAnswered}</p>
+            </div>
+          </div>
+        </Card>
+
+        <Card className="p-3 sm:p-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-text-secondary text-xs sm:text-sm">Achievements</p>
+              <p className="text-2xl sm:text-3xl font-bold text-correct">{user.achievements.length}</p>
             </div>
           </div>
         </Card>
@@ -89,73 +89,73 @@ export function Home({ onStartStudy }: HomeProps) {
 
       {/* Study Modes */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Study Modes</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <Card hover onClick={() => onStartStudy('customer-questions')}>
-            <div className="flex items-start gap-3">
-              <div className="p-3 bg-info/20 rounded-lg">
-                <Users className="text-info" size={24} />
+        <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Study Modes</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+          <Card hover onClick={() => onStartStudy('customer-questions')} className="p-3 sm:p-4">
+            <div className="flex items-start gap-2 sm:gap-3">
+              <div className="p-2 sm:p-3 bg-info/20 rounded-lg">
+                <Users className="text-info" size={20} />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-lg mb-1">Customer Questions</h3>
-                <p className="text-text-secondary text-sm mb-2">
-                  All real customer scenarios. "How big is the soup?" "What kind of tuna?"
+                <h3 className="font-bold text-base sm:text-lg mb-1">Customer Questions</h3>
+                <p className="text-text-secondary text-xs sm:text-sm mb-2">
+                  Real scenarios. "How big is the soup?"
                 </p>
                 <Badge variant="success" size="sm">Most Realistic</Badge>
               </div>
             </div>
           </Card>
 
-          <Card hover onClick={() => onStartStudy('quick-fire')}>
-            <div className="flex items-start gap-3">
-              <div className="p-3 bg-accent-gold/20 rounded-lg">
-                <Zap className="text-accent-gold" size={24} />
+          <Card hover onClick={() => onStartStudy('quick-fire')} className="p-3 sm:p-4">
+            <div className="flex items-start gap-2 sm:gap-3">
+              <div className="p-2 sm:p-3 bg-accent-gold/20 rounded-lg">
+                <Zap className="text-accent-gold" size={20} />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-lg mb-1">Quick Fire</h3>
-                <p className="text-text-secondary text-sm mb-2">
-                  All menu knowledge questions. Type your answers!
+                <h3 className="font-bold text-base sm:text-lg mb-1">Quick Fire</h3>
+                <p className="text-text-secondary text-xs sm:text-sm mb-2">
+                  All menu knowledge. Type answers!
                 </p>
                 <Badge variant="warning" size="sm">All Questions</Badge>
               </div>
             </div>
           </Card>
 
-          <Card hover onClick={() => onStartStudy('flashcard')}>
-            <div className="flex items-start gap-3">
-              <div className="p-3 bg-info/20 rounded-lg">
-                <BookOpen className="text-info" size={24} />
+          <Card hover onClick={() => onStartStudy('flashcard')} className="p-3 sm:p-4">
+            <div className="flex items-start gap-2 sm:gap-3">
+              <div className="p-2 sm:p-3 bg-info/20 rounded-lg">
+                <BookOpen className="text-info" size={20} />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-lg mb-1">Flashcards</h3>
-                <p className="text-text-secondary text-sm mb-2">
-                  Classic flashcard study. Flip to reveal answers.
+                <h3 className="font-bold text-base sm:text-lg mb-1">Flashcards</h3>
+                <p className="text-text-secondary text-xs sm:text-sm mb-2">
+                  Classic study. Flip to reveal.
                 </p>
                 <Badge variant="success" size="sm">All Items</Badge>
               </div>
             </div>
           </Card>
 
-          <Card hover onClick={() => onStartStudy('fill-blank')}>
-            <div className="flex items-start gap-3">
-              <div className="p-3 bg-correct/20 rounded-lg">
-                <Edit3 className="text-correct" size={24} />
+          <Card hover onClick={() => onStartStudy('fill-blank')} className="p-3 sm:p-4">
+            <div className="flex items-start gap-2 sm:gap-3">
+              <div className="p-2 sm:p-3 bg-correct/20 rounded-lg">
+                <Edit3 className="text-correct" size={20} />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-lg mb-1">Test Mode</h3>
-                <p className="text-text-secondary text-sm mb-2">
-                  Complete fill-in-the-blank test. Just like the real thing!
+                <h3 className="font-bold text-base sm:text-lg mb-1">Test Mode</h3>
+                <p className="text-text-secondary text-xs sm:text-sm mb-2">
+                  Fill-in-the-blank. Like the real test!
                 </p>
-                <Badge variant="warning" size="sm">Primary Study Tool</Badge>
+                <Badge variant="warning" size="sm">Primary Tool</Badge>
               </div>
             </div>
           </Card>
 
 
-          <Card className="bg-bg-tertiary/50 border-dashed">
-            <div className="text-center py-4">
-              <p className="text-accent-gold font-bold mb-2">🎉 All Modes Complete!</p>
-              <p className="text-text-secondary text-sm">Choose any mode above to start studying</p>
+          <Card className="bg-bg-tertiary/50 border-dashed p-3 sm:p-4">
+            <div className="text-center py-3 sm:py-4">
+              <p className="text-accent-gold font-bold text-sm sm:text-base mb-2">🎉 All Modes Complete!</p>
+              <p className="text-text-secondary text-xs sm:text-sm">Choose any mode above to start studying</p>
             </div>
           </Card>
         </div>
@@ -163,21 +163,21 @@ export function Home({ onStartStudy }: HomeProps) {
 
       {/* Category Quick Start */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Study by Category</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Study by Category</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
           {categories.map((category) => (
             <Button
               key={category}
               variant="secondary"
               onClick={() => onStartStudy('quick-fire', category)}
-              className="h-auto py-4 flex-col"
+              className="h-auto py-3 sm:py-4 flex-col text-xs sm:text-sm"
             >
-              <span className="text-2xl mb-1">
+              <span className="text-xl sm:text-2xl mb-1">
                 {category.toLowerCase().includes('sushi') ? '🍣' :
                  category.toLowerCase().includes('soup') || category.toLowerCase().includes('salad') ? '🥗' :
                  category.toLowerCase().includes('dressing') || category.toLowerCase().includes('sauce') ? '🧂' : '🍴'}
               </span>
-              <span className="text-sm font-medium">{category}</span>
+              <span className="font-medium">{category}</span>
             </Button>
           ))}
         </div>

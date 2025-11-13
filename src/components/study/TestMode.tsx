@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, EyeOff, Award } from 'lucide-react';
+import { ChevronLeft, ChevronRight, EyeOff, Award, Shuffle } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
 import { Badge } from '../ui/Badge';
@@ -16,7 +16,7 @@ interface TestModeProps {
 }
 
 export function TestMode({ categoryFilter, onComplete }: TestModeProps) {
-  const { questions: allQuestions } = useMenuData();
+  const { questions: allQuestions, categories } = useMenuData();
   const { user, addXp, checkDailyStreak, incrementStreak, resetSessionStreak, recordAnswer } = useStore();
   
   const [questions, setQuestions] = useState<QuestionItem[]>([]);
@@ -26,6 +26,8 @@ export function TestMode({ categoryFilter, onComplete }: TestModeProps) {
   const [completed, setCompleted] = useState(false);
   const [startTime] = useState(Date.now());
   const [sessionScore, setSessionScore] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState<string>(categoryFilter || 'All');
+  const [isShuffled, setIsShuffled] = useState(true);
 
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
 
@@ -176,16 +178,24 @@ export function TestMode({ categoryFilter, onComplete }: TestModeProps) {
     return "Fill in the underlined word(s)";
   };
 
-  // Initialize questions
+  // Initialize questions based on category filter and shuffle
   useEffect(() => {
-    const filtered = categoryFilter
-      ? allQuestions.filter(q => q.category === categoryFilter)
+    const filtered = selectedCategory !== 'All'
+      ? allQuestions.filter(q => q.category === selectedCategory)
       : allQuestions;
     
-    const shuffled = [...filtered].sort(() => Math.random() - 0.5);
-    setQuestions(shuffled);
+    const ordered = isShuffled 
+      ? [...filtered].sort(() => Math.random() - 0.5)
+      : [...filtered];
+    
+    setQuestions(ordered);
+    setCurrentIndex(0);
+    setAnswers({});
+    setShowAnswers(false);
+    setCompleted(false);
+    setSessionScore(0);
     checkDailyStreak();
-  }, [allQuestions, categoryFilter, checkDailyStreak]);
+  }, [allQuestions, selectedCategory, isShuffled, checkDailyStreak]);
 
   const currentQuestion = questions[currentIndex];
   const progress = ((currentIndex + 1) / questions.length) * 100;
@@ -337,6 +347,44 @@ export function TestMode({ categoryFilter, onComplete }: TestModeProps) {
           </p>
         </div>
       </div>
+
+      {/* Filter Controls */}
+      <Card className="mb-4 sm:mb-6 p-3 sm:p-4">
+        <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+          <div className="flex-1 w-full sm:w-auto">
+            <label className="block text-xs sm:text-sm text-text-secondary mb-1.5 sm:mb-2">
+              Filter by Category
+            </label>
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="w-full bg-bg-tertiary text-text-primary rounded-lg px-3 sm:px-4 py-2 sm:py-2.5 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-accent-gold border border-bg-tertiary hover:border-accent-gold/50 transition-colors"
+            >
+              <option value="All">All Categories ({allQuestions.length} questions)</option>
+              {categories.map((cat) => {
+                const count = allQuestions.filter(q => q.category === cat).length;
+                return (
+                  <option key={cat} value={cat}>
+                    {cat} ({count} questions)
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+          
+          <div className="flex items-end gap-2">
+            <Button
+              variant={isShuffled ? "primary" : "secondary"}
+              size="sm"
+              onClick={() => setIsShuffled(!isShuffled)}
+              icon={<Shuffle size={16} />}
+              className="whitespace-nowrap text-xs sm:text-sm"
+            >
+              {isShuffled ? 'Shuffled' : 'In Order'}
+            </Button>
+          </div>
+        </div>
+      </Card>
 
       {/* Progress bar */}
       <ProgressBar progress={progress} className="mb-4 sm:mb-8" />

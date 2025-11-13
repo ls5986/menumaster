@@ -95,87 +95,103 @@ export function TestMode({ categoryFilter, onComplete }: TestModeProps) {
   const getContextHint = (question: QuestionItem): string => {
     const context = question.component.underline_text.toLowerCase();
     const category = question.category.toLowerCase();
+    const itemName = question.itemName.toLowerCase();
     
-    // Salad hints
-    if (category.includes('salad')) {
-      if (context.includes('dressing') || context.includes('dressed')) {
-        return "What dressing/vinaigrette is used?";
-      }
-      if (context.includes('cheese')) {
-        return "What type of cheese?";
-      }
-      if (context.includes('topped') || context.includes('garnished')) {
-        return "What's on top / as garnish?";
-      }
-      if (context.includes('lettuce') || context.includes('greens')) {
-        return "What type of greens/lettuce?";
-      }
-      return "What ingredient(s) are in this salad?";
+    // Check for specific patterns FIRST (most specific to least specific)
+    
+    // Plating/Serving
+    if (context.includes('plate') || context.includes('plated') || context.includes('served on')) {
+      return "How is it served/plated?";
     }
     
-    // Soup hints
+    // Size/Portion
+    if (context.includes('oz') || context.includes('ounce')) {
+      return "How many ounces?";
+    }
+    if (context.includes('pieces') || context.includes('piece')) {
+      return "How many pieces?";
+    }
+    if (context.includes('size')) {
+      return "What size/portion?";
+    }
+    
+    // Toppings/Garnishes
+    if (context.includes('topped with') || context.includes('topped')) {
+      return "What is it topped with?";
+    }
+    if (context.includes('garnished') || context.includes('garnish')) {
+      return "What garnish?";
+    }
+    if (context.includes('finished with') || context.includes('finished')) {
+      return "What's the finishing touch?";
+    }
+    
+    // Sauces/Drizzles
+    if (context.includes('drizzled') || context.includes('drizzle')) {
+      return "What sauce is drizzled?";
+    }
+    if (context.includes('sauce') && !context.includes('soy')) {
+      return "What sauce?";
+    }
+    
+    // Ingredients/Components
+    if (context.includes('layered with') || context.includes('layered')) {
+      return "What ingredients are layered?";
+    }
+    if (context.includes('mixed with') || context.includes('mixed')) {
+      return "What's mixed in?";
+    }
+    if (context.includes('made with') || context.includes('consists of')) {
+      return "What ingredients?";
+    }
+    
+    // Fish/Protein types
+    if (context.includes('tuna') || context.includes('salmon') || context.includes('fish')) {
+      return "What type/grade of fish?";
+    }
+    if (context.includes('shrimp') || context.includes('crab')) {
+      return "What type/grade of seafood?";
+    }
+    
+    // Cheese
+    if (context.includes('cheese')) {
+      return "What type of cheese?";
+    }
+    
+    // Category-specific fallbacks
+    if (category.includes('salad')) {
+      if (context.includes('dressing') || context.includes('dressed')) {
+        return "What dressing?";
+      }
+      if (context.includes('lettuce') || context.includes('greens')) {
+        return "What type of greens?";
+      }
+      return "What ingredients are in this salad?";
+    }
+    
     if (category.includes('soup')) {
-      if (context.includes('oz') || context.includes('size')) {
-        return "How many ounces?";
-      }
-      if (context.includes('served') || context.includes('comes with')) {
-        return "What accompanies the soup?";
-      }
       if (context.includes('contains') || context.includes('flour')) {
-        return "Does it contain flour or other allergens?";
+        return "What allergens/ingredients?";
+      }
+      if (context.includes('served with') || context.includes('comes with')) {
+        return "What comes with it?";
       }
       return "What's in this soup?";
     }
     
-    // Sushi hints
     if (category.includes('sushi')) {
-      if (context.includes('pieces')) {
-        return "How many pieces?";
-      }
-      if (context.includes('topped') || context.includes('each piece')) {
-        return "What's on top of each piece?";
-      }
-      if (context.includes('drizzled') || context.includes('sauce')) {
-        return "What sauce(s)?";
-      }
-      if (context.includes('garnished') || context.includes('finished')) {
-        return "What garnish/finishing touches?";
-      }
-      if (context.includes('tuna') || context.includes('fish')) {
-        return "What type/grade of fish?";
-      }
-      if (context.includes('plate') || context.includes('served on')) {
-        return "What type of plate/presentation?";
-      }
-      if (context.includes('layered') || context.includes('mixed')) {
-        return "What ingredients/toppings?";
-      }
-      return "What component is being tested?";
-    }
-    
-    // Dressing hints
-    if (category.includes('dressing')) {
-      if (context.includes('base') || context.includes('made with')) {
-        return "What's the base? (mayo, egg yolk, oil, etc.)";
-      }
-      if (context.includes('cheese')) {
-        return "What type of cheese?";
-      }
-      if (context.includes('herbs') || context.includes('spices')) {
-        return "What herbs/seasonings?";
-      }
       return "What ingredient(s)?";
     }
     
-    // Generic hints based on common patterns
-    if (context.includes('how many') || context.includes('pieces') || context.includes('oz')) {
-      return "Quantity/portion size";
-    }
-    if (context.includes('what kind') || context.includes('what type')) {
-      return "Specific variety/type";
+    if (category.includes('dressing') || category.includes('sauce')) {
+      if (context.includes('base')) {
+        return "What's the base?";
+      }
+      return "What ingredients?";
     }
     
-    return "Fill in the underlined word(s)";
+    // Final fallback
+    return "Fill in the blank(s)";
   };
 
   // Initialize questions based on category filter and shuffle

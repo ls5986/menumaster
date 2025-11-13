@@ -82,16 +82,24 @@ export function QuickFire({
     if (!userAnswer.trim() || !currentQuestion) return;
 
     const timeMs = Date.now() - questionStartTime;
-    const validation = validateAnswer(
-      userAnswer,
-      currentQuestion.component.answer,
-      currentQuestion.component.alternatives || []
-    );
+    
+    // For new format with individual_blanks
+    const individualBlanks = currentQuestion.component.individual_blanks || [];
+    let isAnswerCorrect = false;
+    
+    if (individualBlanks.length > 0) {
+      // Join all blanks as the expected answer
+      const expectedAnswer = individualBlanks.map(b => b.answer).join(', ');
+      const allAlternatives = individualBlanks.flatMap(b => b.alternatives || []);
+      
+      const validation = validateAnswer(userAnswer, expectedAnswer, allAlternatives);
+      isAnswerCorrect = validation.isCorrect;
+    }
 
-    setIsCorrect(validation.isCorrect);
+    setIsCorrect(isAnswerCorrect);
     setShowFeedback(true);
 
-    if (validation.isCorrect) {
+    if (isAnswerCorrect) {
       setSessionScore(prev => prev + 1);
       incrementStreak();
       
@@ -109,7 +117,7 @@ export function QuickFire({
     }
 
     // Record answer in progress tracking
-    recordAnswer(currentQuestion.id, '0', validation.isCorrect, timeMs);
+    recordAnswer(currentQuestion.id, '0', isAnswerCorrect, timeMs);
   };
 
   const handleSkip = () => {
@@ -239,18 +247,20 @@ export function QuickFire({
               <p className="text-xl text-text-primary leading-relaxed font-medium mb-4">
                 {currentQuestion.component.underline_text}
               </p>
-              <div className="flex items-center gap-2 text-text-secondary text-sm">
-                <span>Fill in:</span>
-                <div className="flex gap-2">
-                  {currentQuestion.component.answer.split(' ').slice(0, 8).map((_, i) => (
-                    <div key={i} className="h-1.5 bg-accent-gold/40 rounded" style={{ width: '45px' }} />
-                  ))}
-                  {currentQuestion.component.answer.split(' ').length > 8 && (
-                    <span className="text-text-secondary">...</span>
-                  )}
+              {currentQuestion.component.individual_blanks && currentQuestion.component.individual_blanks.length > 0 && (
+                <div className="flex items-center gap-2 text-text-secondary text-sm">
+                  <span>Fill in:</span>
+                  <div className="flex gap-2">
+                    {currentQuestion.component.individual_blanks.slice(0, 8).map((_, i) => (
+                      <div key={i} className="h-1.5 bg-accent-gold/40 rounded" style={{ width: '45px' }} />
+                    ))}
+                    {currentQuestion.component.individual_blanks.length > 8 && (
+                      <span className="text-text-secondary">...</span>
+                    )}
+                  </div>
+                  <span className="text-accent-gold font-medium">({currentQuestion.component.individual_blanks.length} blanks)</span>
                 </div>
-                <span className="text-accent-gold font-medium">({currentQuestion.component.answer.split(' ').length} words)</span>
-              </div>
+              )}
             </div>
           </div>
 
@@ -320,7 +330,11 @@ export function QuickFire({
         <AnswerFeedback
           isCorrect={isCorrect}
           userAnswer={userAnswer}
-          correctAnswer={currentQuestion.component.answer}
+          correctAnswer={
+            currentQuestion.component.individual_blanks && currentQuestion.component.individual_blanks.length > 0
+              ? currentQuestion.component.individual_blanks.map(b => b.answer).join(', ')
+              : 'No answer available'
+          }
           xpGained={lastXpGained}
           streak={user.currentSessionStreak}
           onContinue={handleContinue}

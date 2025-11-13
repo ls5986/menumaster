@@ -225,22 +225,24 @@ export function Flashcard({
                     </p>
                     
                     {/* Visual blank indicators */}
-                    <div className="flex flex-col items-center gap-2 mt-6">
-                      <div className="flex items-center gap-2">
-                        <span className="text-text-secondary text-sm">Fill in the blank:</span>
-                        <div className="flex gap-2">
-                          {currentQuestion.component.answer.split(' ').slice(0, 8).map((_, i) => (
-                            <div key={i} className="h-1.5 bg-accent-gold/40 rounded" style={{ width: '45px' }} />
-                          ))}
-                          {currentQuestion.component.answer.split(' ').length > 8 && (
-                            <span className="text-text-secondary text-sm">...</span>
-                          )}
+                    {currentQuestion.component.individual_blanks && currentQuestion.component.individual_blanks.length > 0 && (
+                      <div className="flex flex-col items-center gap-2 mt-6">
+                        <div className="flex items-center gap-2">
+                          <span className="text-text-secondary text-sm">Fill in the blanks:</span>
+                          <div className="flex gap-2">
+                            {currentQuestion.component.individual_blanks.slice(0, 8).map((_, i) => (
+                              <div key={i} className="h-1.5 bg-accent-gold/40 rounded" style={{ width: '45px' }} />
+                            ))}
+                            {currentQuestion.component.individual_blanks.length > 8 && (
+                              <span className="text-text-secondary text-sm">...</span>
+                            )}
+                          </div>
                         </div>
+                        <span className="text-accent-gold text-sm font-medium">
+                          ({currentQuestion.component.individual_blanks.length} blanks)
+                        </span>
                       </div>
-                      <span className="text-accent-gold text-sm font-medium">
-                        ({currentQuestion.component.answer.split(' ').length} words)
-                      </span>
-                    </div>
+                    )}
                   </div>
                   <div className="flex items-center gap-2 text-text-secondary text-sm">
                     <RotateCcw size={16} className="animate-spin-slow" />
@@ -265,22 +267,37 @@ export function Flashcard({
                     {currentQuestion.itemName}
                   </h3>
                   
-                  {/* Show the question context again */}
-                  <p className="text-base text-text-secondary mb-4 text-center italic max-w-2xl">
-                    "{currentQuestion.component.underline_text}"
+                  {/* Show the full text */}
+                  <p className="text-base text-text-secondary mb-6 text-center italic max-w-2xl">
+                    {currentQuestion.component.full_text || currentQuestion.component.underline_text}
                   </p>
                   
-                  <div className="bg-bg-tertiary/50 rounded-xl p-8 mb-4 border-2 border-accent-gold/30">
-                    <p className="text-4xl font-bold text-accent-gold text-center leading-relaxed">
-                      {currentQuestion.component.answer}
-                    </p>
-                  </div>
-                  
-                  {currentQuestion.component.alternatives && currentQuestion.component.alternatives.length > 0 && (
-                    <div className="mt-4 text-center p-4 bg-info/10 rounded-lg border border-info/20 max-w-2xl">
-                      <p className="text-xs text-info font-semibold mb-2">💡 Also acceptable:</p>
-                      <p className="text-sm text-text-primary">
-                        {currentQuestion.component.alternatives.join(' • ')}
+                  {/* Show all answers */}
+                  {currentQuestion.component.individual_blanks && currentQuestion.component.individual_blanks.length > 0 ? (
+                    <div className="bg-bg-tertiary/50 rounded-xl p-6 mb-4 border-2 border-accent-gold/30 w-full max-w-2xl">
+                      <p className="text-sm text-text-secondary mb-4 text-center font-semibold">✓ Correct Answers:</p>
+                      <div className="space-y-3">
+                        {currentQuestion.component.individual_blanks.map((blank, idx) => (
+                          <div key={idx} className="flex items-start gap-3 p-3 bg-bg-secondary/50 rounded-lg">
+                            <span className="text-accent-gold font-bold min-w-[24px]">{idx + 1}.</span>
+                            <div className="flex-1">
+                              <p className="text-xl font-bold text-accent-gold">
+                                {blank.answer}
+                              </p>
+                              {blank.alternatives && blank.alternatives.length > 0 && (
+                                <p className="text-xs text-info mt-1">
+                                  Also: {blank.alternatives.join(', ')}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="bg-bg-tertiary/50 rounded-xl p-8 mb-4 border-2 border-accent-gold/30">
+                      <p className="text-2xl font-bold text-accent-gold text-center">
+                        No answer data available
                       </p>
                     </div>
                   )}

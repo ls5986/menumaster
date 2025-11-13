@@ -1,0 +1,465 @@
+import { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronLeft, ChevronRight, EyeOff, Award } from 'lucide-react';
+import { Button } from '../ui/Button';
+import { Card } from '../ui/Card';
+import { Badge } from '../ui/Badge';
+import { ProgressBar } from '../ui/ProgressBar';
+import { useStore } from '../../store/useStore';
+import { useMenuData } from '../../hooks/useMenuData';
+import { validateAnswer } from '../../utils/answerValidation';
+import type { QuestionItem } from '../../types/menu.types';
+
+interface TestModeProps {
+  categoryFilter?: string;
+  onComplete?: () => void;
+}
+
+export function TestMode({ categoryFilter, onComplete }: TestModeProps) {
+  const { questions: allQuestions } = useMenuData();
+  const { user, addXp, checkDailyStreak, incrementStreak, resetSessionStreak, recordAnswer } = useStore();
+  
+  const [questions, setQuestions] = useState<QuestionItem[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [showAnswers, setShowAnswers] = useState(false);
+  const [completed, setCompleted] = useState(false);
+  const [startTime] = useState(Date.now());
+  const [sessionScore, setSessionScore] = useState(0);
+
+  const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
+
+  // Render a single blank input field
+  const renderSingleBlank = (blankInfo: any, idx: number, isLast: boolean) => {
+    const blankId = `${currentQuestion.id}_${idx}`;
+    const userValue = answers[blankId] || '';
+    const word = blankInfo.answer;
+    
+    const validation = validateAnswer(
+      userValue,
+      word,
+      blankInfo.alternatives || []
+    );
+
+    const isCorrect = validation.isCorrect;
+    const inputWidth = Math.max(word.length + 2, 8);
+
+    return (
+      <input
+        key={blankId}
+        ref={el => { inputRefs.current[blankId] = el; }}
+        type="text"
+        value={userValue}
+        onChange={(e) => {
+          setAnswers({
+            ...answers,
+            [blankId]: e.target.value
+          });
+        }}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            if (isLast) {
+              handleCheckAnswers();
+            } else {
+              // Focus next blank
+              const nextBlankId = `${currentQuestion.id}_${idx + 1}`;
+              inputRefs.current[nextBlankId]?.focus();
+            }
+          }
+        }}
+        className={`inline-block mx-1 px-2 py-1 text-center font-medium transition-all
+          ${showAnswers ? 'bg-correct/10 border-correct text-correct' : 'bg-bg-tertiary'}
+          ${!showAnswers && userValue && isCorrect ? 'border-correct bg-correct/10' : ''}
+          ${!showAnswers && userValue && !isCorrect ? 'border-incorrect bg-incorrect/10' : ''}
+          border-b-2 focus:outline-none focus:ring-2 focus:ring-accent-gold rounded-sm`}
+        style={{ width: `${inputWidth}ch` }}
+        placeholder={showAnswers ? word : '_'.repeat(Math.min(word.length, 12))}
+        disabled={showAnswers}
+        autoComplete="off"
+      />
+    );
+  };
+
+  // Import and add the XP calculator
+  const calculateXpReward = (isCorrect: boolean, streak: number, timeMs: number) => {
+    const baseXp = isCorrect ? 10 : 5;
+    const streakBonus = streak * 2;
+    const timeBonus = timeMs < 5000 ? 5 : 0;
+    return baseXp + streakBonus + timeBonus;
+  };
+
+  // Generate contextual hints based on the question
+  const getContextHint = (question: QuestionItem): string => {
+    const context = question.component.underline_text.toLowerCase();
+    const category = question.category.toLowerCase();
+    
+    // Salad hints
+    if (category.includes('salad')) {
+      if (context.includes('dressing') || context.includes('dressed')) {
+        return "What dressing/vinaigrette is used?";
+      }
+      if (context.includes('cheese')) {
+        return "What type of cheese?";
+      }
+      if (context.includes('topped') || context.includes('garnished')) {
+        return "What's on top / as garnish?";
+      }
+      if (context.includes('lettuce') || context.includes('greens')) {
+        return "What type of greens/lettuce?";
+      }
+      return "What ingredient(s) are in this salad?";
+    }
+    
+    // Soup hints
+    if (category.includes('soup')) {
+      if (context.includes('oz') || context.includes('size')) {
+        return "How many ounces?";
+      }
+      if (context.includes('served') || context.includes('comes with')) {
+        return "What accompanies the soup?";
+      }
+      if (context.includes('contains') || context.includes('flour')) {
+        return "Does it contain flour or other allergens?";
+      }
+      return "What's in this soup?";
+    }
+    
+    // Sushi hints
+    if (category.includes('sushi')) {
+      if (context.includes('pieces')) {
+        return "How many pieces?";
+      }
+      if (context.includes('topped') || context.includes('each piece')) {
+        return "What's on top of each piece?";
+      }
+      if (context.includes('drizzled') || context.includes('sauce')) {
+        return "What sauce(s)?";
+      }
+      if (context.includes('garnished') || context.includes('finished')) {
+        return "What garnish/finishing touches?";
+      }
+      if (context.includes('tuna') || context.includes('fish')) {
+        return "What type/grade of fish?";
+      }
+      if (context.includes('plate') || context.includes('served on')) {
+        return "What type of plate/presentation?";
+      }
+      if (context.includes('layered') || context.includes('mixed')) {
+        return "What ingredients/toppings?";
+      }
+      return "What component is being tested?";
+    }
+    
+    // Dressing hints
+    if (category.includes('dressing')) {
+      if (context.includes('base') || context.includes('made with')) {
+        return "What's the base? (mayo, egg yolk, oil, etc.)";
+      }
+      if (context.includes('cheese')) {
+        return "What type of cheese?";
+      }
+      if (context.includes('herbs') || context.includes('spices')) {
+        return "What herbs/seasonings?";
+      }
+      return "What ingredient(s)?";
+    }
+    
+    // Generic hints based on common patterns
+    if (context.includes('how many') || context.includes('pieces') || context.includes('oz')) {
+      return "Quantity/portion size";
+    }
+    if (context.includes('what kind') || context.includes('what type')) {
+      return "Specific variety/type";
+    }
+    
+    return "Fill in the underlined word(s)";
+  };
+
+  // Initialize questions
+  useEffect(() => {
+    const filtered = categoryFilter
+      ? allQuestions.filter(q => q.category === categoryFilter)
+      : allQuestions;
+    
+    const shuffled = [...filtered].sort(() => Math.random() - 0.5);
+    setQuestions(shuffled);
+    checkDailyStreak();
+  }, [allQuestions, categoryFilter, checkDailyStreak]);
+
+  const currentQuestion = questions[currentIndex];
+  const progress = ((currentIndex + 1) / questions.length) * 100;
+
+  // Generate blank input for each word in the answer
+  const renderLineWithBlanks = () => {
+    if (!currentQuestion) return null;
+
+    const context = currentQuestion.component.underline_text;
+    const individualBlanks = currentQuestion.component.individual_blanks || [];
+    
+    if (individualBlanks.length === 0) {
+      return <p className="text-xl leading-relaxed text-text-primary">{context}</p>;
+    }
+
+    // Split context by ___ to get text parts and blank positions
+    const textParts = context.split('___');
+    
+    return (
+      <p className="text-xl leading-relaxed flex flex-wrap items-center gap-1">
+        {textParts.map((part, partIdx) => (
+          <span key={`part-${partIdx}`} className="inline-flex items-center flex-wrap">
+            <span>{part}</span>
+            {partIdx < individualBlanks.length && renderSingleBlank(
+              individualBlanks[partIdx], 
+              partIdx,
+              partIdx === individualBlanks.length - 1
+            )}
+          </span>
+        ))}
+      </p>
+    );
+  };
+
+  const handleCheckAnswers = () => {
+    if (!currentQuestion) return;
+    
+    const individualBlanks = currentQuestion.component.individual_blanks || [];
+    let correctBlanks = 0;
+
+    individualBlanks.forEach((blank, idx) => {
+      const blankId = `${currentQuestion.id}_${idx}`;
+      const userAnswer = answers[blankId] || '';
+      const validation = validateAnswer(userAnswer, blank.answer, blank.alternatives || []);
+      if (validation.isCorrect) {
+        correctBlanks++;
+      }
+    });
+
+    const isAllCorrect = correctBlanks === individualBlanks.length;
+    setShowAnswers(true);
+
+    const timeMs = Date.now() - startTime;
+    recordAnswer(currentQuestion.id, '0', isAllCorrect, timeMs);
+
+    if (isAllCorrect) {
+      setSessionScore(prev => prev + 1);
+      incrementStreak();
+      addXp(calculateXpReward(true, user.currentSessionStreak, timeMs));
+    } else {
+      resetSessionStreak();
+      addXp(calculateXpReward(false, user.currentSessionStreak, timeMs));
+    }
+  };
+
+  const handleNextItem = () => {
+    if (currentIndex + 1 < questions.length) {
+      setCurrentIndex(prev => prev + 1);
+      setAnswers({});
+      setShowAnswers(false);
+    } else {
+      setCompleted(true);
+      onComplete?.();
+    }
+  };
+
+  const handlePreviousItem = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(prev => prev - 1);
+      setAnswers({});
+      setShowAnswers(false);
+    }
+  };
+
+  if (questions.length === 0) {
+    return (
+      <div className="text-center py-12">
+        <p className="text-text-secondary">Loading test...</p>
+      </div>
+    );
+  }
+
+  if (completed) {
+    const accuracy = questions.length > 0 ? (sessionScore / questions.length) * 100 : 0;
+
+    return (
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="max-w-2xl mx-auto text-center py-12"
+      >
+        <Card>
+          <div className="mb-6">
+            <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-accent-gold/20 flex items-center justify-center">
+              <Award className="text-accent-gold" size={48} />
+            </div>
+            <h2 className="text-3xl font-bold mb-2">Test Complete! 🎉</h2>
+            <p className="text-text-secondary">You've completed the full menu test!</p>
+          </div>
+          
+          <div className="grid grid-cols-2 gap-4 mb-6">
+            <div>
+              <p className="text-text-secondary text-sm">Items Reviewed</p>
+              <p className="text-3xl font-bold text-accent-gold">{questions.length}</p>
+            </div>
+            <div>
+              <p className="text-text-secondary text-sm">Accuracy</p>
+              <p className="text-3xl font-bold text-correct">{accuracy}%</p>
+            </div>
+          </div>
+          
+          <div className="flex gap-3 justify-center">
+            <Button variant="primary" onClick={() => window.location.reload()}>
+              Retake Test
+            </Button>
+            <Button variant="secondary" onClick={onComplete}>
+              Back to Home
+            </Button>
+          </div>
+        </Card>
+      </motion.div>
+    );
+  }
+
+  return (
+    <div className="max-w-4xl mx-auto">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <h1 className="text-2xl font-bold mb-1">📝 Menu Practice Test</h1>
+          <p className="text-text-secondary text-sm">
+            Fill in the blanks - type each underlined word
+          </p>
+        </div>
+        <div className="text-right">
+          <p className="text-sm text-text-secondary mb-1">Progress</p>
+          <p className="text-lg font-bold">
+            {currentIndex + 1}/{questions.length}
+          </p>
+        </div>
+      </div>
+
+      {/* Progress bar */}
+      <ProgressBar progress={progress} className="mb-8" />
+
+      {/* Test Item */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentIndex}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.3 }}
+        >
+          <Card className="mb-6">
+            {/* Item Header */}
+            <div className="border-b border-bg-tertiary pb-4 mb-6">
+              <div className="flex items-start justify-between mb-2">
+                <div>
+                  <h2 className="text-2xl font-bold text-accent-gold mb-2">
+                    {currentQuestion.itemName}
+                  </h2>
+                  <Badge variant="info">{currentQuestion.category}</Badge>
+                </div>
+                {showAnswers && (
+                  <div className="text-right">
+                    <p className="text-sm text-text-secondary">Score</p>
+                    <p className="text-2xl font-bold text-accent-gold">
+                      {sessionScore}/{currentIndex + 1}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Test Line */}
+            <div className="mb-6">
+              <div className="bg-bg-tertiary/30 rounded-lg p-6 border-l-4 border-accent-gold">
+                {renderLineWithBlanks()}
+              </div>
+
+              {/* Hints */}
+              {!showAnswers && (
+                <div className="mt-4 space-y-2">
+                  {currentQuestion.component.hint && (
+                    <div className="flex items-start gap-2 text-sm text-info bg-info/10 p-3 rounded-lg border border-info/20">
+                      <span className="text-lg">💡</span>
+                      <p className="font-medium">{currentQuestion.component.hint}</p>
+                    </div>
+                  )}
+                  {getContextHint(currentQuestion) && (
+                    <div className="flex items-start gap-2 text-sm text-warning bg-warning/10 p-3 rounded-lg border border-warning/20">
+                      <span className="text-lg">🎯</span>
+                      <p className="font-medium">{getContextHint(currentQuestion)}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Show Answer Feedback */}
+              {showAnswers && currentQuestion.component.individual_blanks && (
+                <div className="mt-4 p-4 bg-correct/10 border border-correct/30 rounded-lg">
+                  <p className="text-sm font-semibold text-correct mb-2">✓ Correct Answers:</p>
+                  {currentQuestion.component.individual_blanks.map((blank, idx) => (
+                    <div key={idx} className="mb-2">
+                      <span className="font-bold text-accent-gold">{blank.answer}</span>
+                      {blank.alternatives && blank.alternatives.length > 0 && (
+                        <span className="text-sm text-text-secondary ml-2">
+                          (also: {blank.alternatives.join(', ')})
+                        </span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Controls */}
+            <div className="flex items-center justify-between gap-4">
+              <Button
+                variant="secondary"
+                onClick={handlePreviousItem}
+                disabled={currentIndex === 0}
+                icon={<ChevronLeft size={20} />}
+              >
+                Previous
+              </Button>
+
+              {!showAnswers ? (
+                <Button
+                  variant="primary"
+                  onClick={handleCheckAnswers}
+                >
+                  Check Answers
+                </Button>
+              ) : (
+                <Button
+                  variant="secondary"
+                  onClick={() => setShowAnswers(false)}
+                  icon={<EyeOff size={20} />}
+                >
+                  Hide Answers
+                </Button>
+              )}
+
+              <Button
+                variant="primary"
+                onClick={handleNextItem}
+                disabled={!showAnswers && currentIndex < questions.length - 1}
+                icon={<ChevronRight size={20} />}
+              >
+                {currentIndex + 1 >= questions.length ? 'Finish' : 'Next Item'}
+              </Button>
+            </div>
+          </Card>
+
+          {/* Instructions */}
+          <div className="text-center text-sm text-text-secondary">
+            <p className="mb-1">💡 <strong>Tip:</strong> Press Enter to move to the next blank</p>
+            <p>Multiple blanks? Fill each one separately (e.g., "wonton" then "chip")</p>
+          </div>
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+}
+

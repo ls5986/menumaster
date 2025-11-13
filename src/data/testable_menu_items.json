@@ -1,0 +1,3060 @@
+{
+  "menu_items": [
+    {
+      "id": "ahi_tuna_tostada",
+      "name": "Ahi Tuna Tostada",
+      "category": "Sushi Selection",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "• 3 tostadas per order (also can be ordered individually)",
+          "context": "• ___ tostadas per order (also can be ordered individually)",
+          "individual_blanks": [
+            {
+              "answer": "3",
+              "alternatives": ["3", "three", "3 tostadas", "three tostadas"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Finely chopped raw sashimi grade Bigeye tuna",
+          "context": "• ___ chopped raw ___ grade ___ tuna",
+          "individual_blanks": [
+            {
+              "answer": "Finely",
+              "alternatives": ["finely"]
+            },
+            {
+              "answer": "sashimi",
+              "alternatives": ["sashimi"]
+            },
+            {
+              "answer": "Bigeye",
+              "alternatives": ["bigeye", "big eye"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Placed atop a crisp wonton chip",
+          "context": "• ___ atop a crisp ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Placed",
+              "alternatives": ["placed"]
+            },
+            {
+              "answer": "wonton",
+              "alternatives": ["wonton"]
+            },
+            {
+              "answer": "chip",
+              "alternatives": ["chip", "chips"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Layered with pickled red onions, avocado slices and finely sliced scallions",
+          "context": "• ___ with ___ ___ ___, ___ slices and finely ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Layered",
+              "alternatives": ["layered"]
+            },
+            {
+              "answer": "pickled",
+              "alternatives": ["pickled"]
+            },
+            {
+              "answer": "red",
+              "alternatives": ["red"]
+            },
+            {
+              "answer": "onions",
+              "alternatives": ["onions", "onion"]
+            },
+            {
+              "answer": "avocado",
+              "alternatives": ["avocado", "avocados"]
+            },
+            {
+              "answer": "sliced",
+              "alternatives": ["sliced"]
+            },
+            {
+              "answer": "scallions",
+              "alternatives": ["scallions", "scallion", "green onions"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Served on long rectangular plate",
+          "context": "• ___ on ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Served",
+              "alternatives": ["served"]
+            },
+            {
+              "answer": "long",
+              "alternatives": ["long"]
+            },
+            {
+              "answer": "rectangular",
+              "alternatives": ["rectangular"]
+            },
+            {
+              "answer": "plate",
+              "alternatives": ["plate"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Drizzled with tostada sauce",
+          "context": "• ___ with ___ sauce",
+          "individual_blanks": [
+            {
+              "answer": "Drizzled",
+              "alternatives": ["drizzled"]
+            },
+            {
+              "answer": "tostada",
+              "alternatives": ["tostada"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Finished with white and black sesame seeds",
+          "context": "• ___ with ___ and ___ ___ seeds",
+          "individual_blanks": [
+            {
+              "answer": "Finished",
+              "alternatives": ["finished"]
+            },
+            {
+              "answer": "white",
+              "alternatives": ["white"]
+            },
+            {
+              "answer": "black",
+              "alternatives": ["black"]
+            },
+            {
+              "answer": "sesame",
+              "alternatives": ["sesame"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crispy_garlic_tuna_sashimi",
+      "name": "Crispy Garlic Tuna Sashimi",
+      "category": "Sushi Selection",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "• 2 pieces of thinly sliced raw, sashimi grade Bigeye tuna",
+          "context": "• ___ of thinly sliced raw, sashimi grade Bigeye tuna",
+          "individual_blanks": [
+            {
+              "answer": "2 pieces",
+              "alternatives": ["2", "two", "two pieces", "2 pieces"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Each piece topped with a garlic chip",
+          "context": "• Each piece topped with a ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "garlic",
+              "alternatives": ["garlic"]
+            },
+            {
+              "answer": "chip",
+              "alternatives": ["chip", "chips", "fried garlic chip"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Drizzled with curry oil and ponzu sauce",
+          "context": "• Drizzled with ___ ___ and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "curry",
+              "alternatives": ["curry"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            },
+            {
+              "answer": "ponzu",
+              "alternatives": ["ponzu"]
+            },
+            {
+              "answer": "sauce",
+              "alternatives": ["sauce"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Garnished with pickled red onions, sliced green onion and black sesame seeds",
+          "context": "• Garnished with ___ ___ ___, sliced green onion and black sesame seeds",
+          "individual_blanks": [
+            {
+              "answer": "pickled",
+              "alternatives": ["pickled"]
+            },
+            {
+              "answer": "red",
+              "alternatives": ["red"]
+            },
+            {
+              "answer": "onions",
+              "alternatives": ["onions", "onion", "pickled red onion"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hamachi_crispy_onions",
+      "name": "Hamachi with Crispy Onions",
+      "category": "Sushi Selection",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "• 9 pieces of thinly sliced raw Hamachi",
+          "context": "• ___ of thinly sliced raw Hamachi",
+          "individual_blanks": [
+            {
+              "answer": "9 pieces",
+              "alternatives": ["9", "nine", "nine pieces", "9 pieces"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Served in a large bowl",
+          "context": "• ___ in a ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Served",
+              "alternatives": ["served"]
+            },
+            {
+              "answer": "large",
+              "alternatives": ["large"]
+            },
+            {
+              "answer": "bowl",
+              "alternatives": ["bowl", "large bowl"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Fried Mexican green onions placed in the center of the bowl",
+          "context": "• ___ ___ ___ ___ placed in the ___ of the bowl",
+          "individual_blanks": [
+            {
+              "answer": "Fried",
+              "alternatives": ["fried"]
+            },
+            {
+              "answer": "Mexican",
+              "alternatives": ["mexican"]
+            },
+            {
+              "answer": "green",
+              "alternatives": ["green"]
+            },
+            {
+              "answer": "onions",
+              "alternatives": ["onions", "onion"]
+            },
+            {
+              "answer": "center",
+              "alternatives": ["center", "centre"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Drizzled with Ponzu truffle oil",
+          "context": "• Drizzled with ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Ponzu",
+              "alternatives": ["ponzu"]
+            },
+            {
+              "answer": "truffle",
+              "alternatives": ["truffle"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Finished with a pinch of truffle salt",
+          "context": "• Finished with a pinch of ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "truffle",
+              "alternatives": ["truffle"]
+            },
+            {
+              "answer": "salt",
+              "alternatives": ["salt"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguro_lime_roll",
+      "name": "Maguro Lime Roll",
+      "category": "Sushi Selection",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "• Yellow chile stuffed with spicy tuna dipped in tempura batter then fried",
+          "context": "• ___ chile ___ with spicy tuna ___ in ___ ___ then ___",
+          "individual_blanks": [
+            {
+              "answer": "Yellow",
+              "alternatives": ["yellow"]
+            },
+            {
+              "answer": "stuffed",
+              "alternatives": ["stuffed"]
+            },
+            {
+              "answer": "dipped",
+              "alternatives": ["dipped"]
+            },
+            {
+              "answer": "tempura",
+              "alternatives": ["tempura"]
+            },
+            {
+              "answer": "batter",
+              "alternatives": ["batter"]
+            },
+            {
+              "answer": "fried",
+              "alternatives": ["fried"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Rolled with sushi rice, white sesame seeds and nori (seaweed wrap)",
+          "context": "• ___ with ___ ___, ___ ___ ___ and ___ (seaweed wrap)",
+          "individual_blanks": [
+            {
+              "answer": "Rolled",
+              "alternatives": ["rolled"]
+            },
+            {
+              "answer": "sushi",
+              "alternatives": ["sushi"]
+            },
+            {
+              "answer": "rice",
+              "alternatives": ["rice"]
+            },
+            {
+              "answer": "white",
+              "alternatives": ["white"]
+            },
+            {
+              "answer": "sesame",
+              "alternatives": ["sesame"]
+            },
+            {
+              "answer": "seeds",
+              "alternatives": ["seeds", "seed"]
+            },
+            {
+              "answer": "nori",
+              "alternatives": ["nori", "seaweed"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Draped with thinly sliced Bigeye tuna and avocado",
+          "context": "• ___ with thinly sliced ___ ___ and ___",
+          "individual_blanks": [
+            {
+              "answer": "Draped",
+              "alternatives": ["draped"]
+            },
+            {
+              "answer": "Bigeye",
+              "alternatives": ["bigeye", "big eye"]
+            },
+            {
+              "answer": "tuna",
+              "alternatives": ["tuna"]
+            },
+            {
+              "answer": "avocado",
+              "alternatives": ["avocado"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Cut into 8 pieces",
+          "context": "• Cut into ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "8",
+              "alternatives": ["8", "eight", "8 pieces", "eight pieces"]
+            },
+            {
+              "answer": "pieces",
+              "alternatives": ["pieces"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Served on a long rectangular plate",
+          "context": "• Served on a ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "long",
+              "alternatives": ["long"]
+            },
+            {
+              "answer": "rectangular",
+              "alternatives": ["rectangular"]
+            },
+            {
+              "answer": "plate",
+              "alternatives": ["plate"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Drizzled with ponzu sauce & curry oil",
+          "context": "• Drizzled with ___ ___ & ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "ponzu",
+              "alternatives": ["ponzu"]
+            },
+            {
+              "answer": "sauce",
+              "alternatives": ["sauce"]
+            },
+            {
+              "answer": "curry",
+              "alternatives": ["curry"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Finished with paper thin key lime slices, scallions and black sesame seeds",
+          "context": "• Finished with paper thin ___ ___ ___, ___ and ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "key",
+              "alternatives": ["key"]
+            },
+            {
+              "answer": "lime",
+              "alternatives": ["lime"]
+            },
+            {
+              "answer": "slices",
+              "alternatives": ["slices", "slice"]
+            },
+            {
+              "answer": "scallions",
+              "alternatives": ["scallions", "scallion"]
+            },
+            {
+              "answer": "black",
+              "alternatives": ["black"]
+            },
+            {
+              "answer": "sesame",
+              "alternatives": ["sesame"]
+            },
+            {
+              "answer": "seeds",
+              "alternatives": ["seeds", "seed"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clear_lobster_roll",
+      "name": "Clear Lobster Roll",
+      "category": "Sushi Selection",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "• Slipper lobster tail dipped in tempura batter then fried",
+          "context": "• ___ ___ ___ ___ in ___ ___ then ___",
+          "individual_blanks": [
+            {
+              "answer": "Slipper",
+              "alternatives": ["slipper"]
+            },
+            {
+              "answer": "lobster",
+              "alternatives": ["lobster"]
+            },
+            {
+              "answer": "tail",
+              "alternatives": ["tail"]
+            },
+            {
+              "answer": "dipped",
+              "alternatives": ["dipped"]
+            },
+            {
+              "answer": "tempura",
+              "alternatives": ["tempura"]
+            },
+            {
+              "answer": "batter",
+              "alternatives": ["batter"]
+            },
+            {
+              "answer": "fried",
+              "alternatives": ["fried"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Lobster mixed with vegetarian spicy mayo, cilantro, mango, avocado, red leaf lettuce and masago",
+          "context": "• Lobster ___ with vegetarian ___ ___, ___, ___, ___, ___ ___ ___ and ___",
+          "individual_blanks": [
+            {
+              "answer": "mixed",
+              "alternatives": ["mixed"]
+            },
+            {
+              "answer": "spicy",
+              "alternatives": ["spicy"]
+            },
+            {
+              "answer": "mayo",
+              "alternatives": ["mayo", "mayonnaise"]
+            },
+            {
+              "answer": "cilantro",
+              "alternatives": ["cilantro"]
+            },
+            {
+              "answer": "mango",
+              "alternatives": ["mango"]
+            },
+            {
+              "answer": "avocado",
+              "alternatives": ["avocado"]
+            },
+            {
+              "answer": "red",
+              "alternatives": ["red"]
+            },
+            {
+              "answer": "leaf",
+              "alternatives": ["leaf"]
+            },
+            {
+              "answer": "lettuce",
+              "alternatives": ["lettuce"]
+            },
+            {
+              "answer": "masago",
+              "alternatives": ["masago"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Rolled with sushi rice in Goma paper",
+          "context": "• Rolled with ___ ___ in ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "sushi",
+              "alternatives": ["sushi"]
+            },
+            {
+              "answer": "rice",
+              "alternatives": ["rice"]
+            },
+            {
+              "answer": "Goma",
+              "alternatives": ["goma"]
+            },
+            {
+              "answer": "paper",
+              "alternatives": ["paper"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Cut into 8 pieces",
+          "context": "• Cut into ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "8",
+              "alternatives": ["8", "eight"]
+            },
+            {
+              "answer": "pieces",
+              "alternatives": ["pieces"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Served on a deep square plate atop lobster sauce drizzled with curry oil",
+          "context": "• Served on a ___ ___ ___ atop ___ ___ drizzled with ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "deep",
+              "alternatives": ["deep"]
+            },
+            {
+              "answer": "square",
+              "alternatives": ["square"]
+            },
+            {
+              "answer": "plate",
+              "alternatives": ["plate"]
+            },
+            {
+              "answer": "lobster",
+              "alternatives": ["lobster"]
+            },
+            {
+              "answer": "sauce",
+              "alternatives": ["sauce"]
+            },
+            {
+              "answer": "curry",
+              "alternatives": ["curry"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Presented as a pyramid",
+          "context": "• ___ as a ___",
+          "individual_blanks": [
+            {
+              "answer": "Presented",
+              "alternatives": ["presented"]
+            },
+            {
+              "answer": "pyramid",
+              "alternatives": ["pyramid"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Garnished with carrot curls and black sesame seeds",
+          "context": "• Garnished with ___ ___ and ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "carrot",
+              "alternatives": ["carrot"]
+            },
+            {
+              "answer": "curls",
+              "alternatives": ["curls"]
+            },
+            {
+              "answer": "black",
+              "alternatives": ["black"]
+            },
+            {
+              "answer": "sesame",
+              "alternatives": ["sesame"]
+            },
+            {
+              "answer": "seeds",
+              "alternatives": ["seeds", "seed"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "veggie_roll",
+      "name": "Veggie Roll",
+      "category": "Sushi Selection",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "• Asparagus dipped in tempura batter then fried",
+          "context": "• ___ ___ in ___ ___ then ___",
+          "individual_blanks": [
+            {
+              "answer": "Asparagus",
+              "alternatives": ["asparagus"]
+            },
+            {
+              "answer": "dipped",
+              "alternatives": ["dipped"]
+            },
+            {
+              "answer": "tempura",
+              "alternatives": ["tempura"]
+            },
+            {
+              "answer": "batter",
+              "alternatives": ["batter"]
+            },
+            {
+              "answer": "fried",
+              "alternatives": ["fried"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Asparagus layered with spicy mayo, cucumber, yamagobo, avocado, red leaf lettuce, and white and black sesame seeds",
+          "context": "• Asparagus ___ with ___ ___, ___, ___, ___, ___ ___ ___, and white and black ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "layered",
+              "alternatives": ["layered"]
+            },
+            {
+              "answer": "spicy",
+              "alternatives": ["spicy"]
+            },
+            {
+              "answer": "mayo",
+              "alternatives": ["mayo"]
+            },
+            {
+              "answer": "cucumber",
+              "alternatives": ["cucumber"]
+            },
+            {
+              "answer": "yamagobo",
+              "alternatives": ["yamagobo"]
+            },
+            {
+              "answer": "avocado",
+              "alternatives": ["avocado"]
+            },
+            {
+              "answer": "red",
+              "alternatives": ["red"]
+            },
+            {
+              "answer": "leaf",
+              "alternatives": ["leaf"]
+            },
+            {
+              "answer": "lettuce",
+              "alternatives": ["lettuce"]
+            },
+            {
+              "answer": "sesame",
+              "alternatives": ["sesame"]
+            },
+            {
+              "answer": "seeds",
+              "alternatives": ["seeds"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Rolled with sushi rice and Goma paper",
+          "context": "• Rolled with ___ ___ and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "sushi",
+              "alternatives": ["sushi"]
+            },
+            {
+              "answer": "rice",
+              "alternatives": ["rice"]
+            },
+            {
+              "answer": "Goma",
+              "alternatives": ["goma"]
+            },
+            {
+              "answer": "paper",
+              "alternatives": ["paper"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Cut into 8 pieces",
+          "context": "• Cut into ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "8",
+              "alternatives": ["8", "eight"]
+            },
+            {
+              "answer": "pieces",
+              "alternatives": ["pieces"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Presented atop a zig-zag of spicy mayo",
+          "context": "• Presented atop a ___-___ of ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "zig",
+              "alternatives": ["zig"]
+            },
+            {
+              "answer": "zag",
+              "alternatives": ["zag", "zigzag"]
+            },
+            {
+              "answer": "spicy",
+              "alternatives": ["spicy"]
+            },
+            {
+              "answer": "mayo",
+              "alternatives": ["mayo"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a5_wagyu_beef_roll",
+      "name": "A5 Wagyu Beef Roll",
+      "category": "Sushi Selection",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "• An inside out nori roll",
+          "context": "• An ___ ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "inside",
+              "alternatives": ["inside"]
+            },
+            {
+              "answer": "out",
+              "alternatives": ["out"]
+            },
+            {
+              "answer": "nori",
+              "alternatives": ["nori"]
+            },
+            {
+              "answer": "roll",
+              "alternatives": ["roll"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Sushi rice placed on nori and flipped over",
+          "context": "• ___ ___ ___ on ___ and ___ over",
+          "individual_blanks": [
+            {
+              "answer": "Sushi",
+              "alternatives": ["sushi"]
+            },
+            {
+              "answer": "rice",
+              "alternatives": ["rice"]
+            },
+            {
+              "answer": "placed",
+              "alternatives": ["placed"]
+            },
+            {
+              "answer": "nori",
+              "alternatives": ["nori"]
+            },
+            {
+              "answer": "flipped",
+              "alternatives": ["flipped"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Avocado and asparagus placed on nori and rolled",
+          "context": "• ___ and ___ placed on nori and rolled",
+          "individual_blanks": [
+            {
+              "answer": "Avocado",
+              "alternatives": ["avocado"]
+            },
+            {
+              "answer": "asparagus",
+              "alternatives": ["asparagus"]
+            }
+          ]
+        },
+        {
+          "full_text": "• 1.5oz of A5 wagyu minced and draped on top of roll",
+          "context": "• ___ of ___ ___ ___ and ___ on top of roll",
+          "individual_blanks": [
+            {
+              "answer": "1.5oz",
+              "alternatives": ["1.5oz", "1.5 oz", "one and a half ounces"]
+            },
+            {
+              "answer": "A5",
+              "alternatives": ["a5", "A5"]
+            },
+            {
+              "answer": "wagyu",
+              "alternatives": ["wagyu"]
+            },
+            {
+              "answer": "minced",
+              "alternatives": ["minced"]
+            },
+            {
+              "answer": "draped",
+              "alternatives": ["draped"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Wagyu seasoned with sea salt and lightly bruleed",
+          "context": "• Wagyu ___ with ___ ___ and lightly ___",
+          "individual_blanks": [
+            {
+              "answer": "seasoned",
+              "alternatives": ["seasoned"]
+            },
+            {
+              "answer": "sea",
+              "alternatives": ["sea"]
+            },
+            {
+              "answer": "salt",
+              "alternatives": ["salt"]
+            },
+            {
+              "answer": "bruleed",
+              "alternatives": ["bruleed", "brulee'd"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Roll cut into 8 pieces",
+          "context": "• Roll cut into ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "8",
+              "alternatives": ["8", "eight"]
+            },
+            {
+              "answer": "pieces",
+              "alternatives": ["pieces"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Served on long rectangular plate",
+          "context": "• Served on ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "long",
+              "alternatives": ["long"]
+            },
+            {
+              "answer": "rectangular",
+              "alternatives": ["rectangular"]
+            },
+            {
+              "answer": "plate",
+              "alternatives": ["plate"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Each piece draped with paper thin Serrano Chile slices",
+          "context": "• Each piece ___ with paper thin ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "draped",
+              "alternatives": ["draped"]
+            },
+            {
+              "answer": "Serrano",
+              "alternatives": ["serrano"]
+            },
+            {
+              "answer": "Chile",
+              "alternatives": ["chile", "chili"]
+            },
+            {
+              "answer": "slices",
+              "alternatives": ["slices", "slice"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Small dollops of cilantro vinaigrette placed between each piece",
+          "context": "• Small dollops of ___ ___ placed between each piece",
+          "individual_blanks": [
+            {
+              "answer": "cilantro",
+              "alternatives": ["cilantro"]
+            },
+            {
+              "answer": "vinaigrette",
+              "alternatives": ["vinaigrette"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Drizzled with ponzu sauce",
+          "context": "• Drizzled with ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "ponzu",
+              "alternatives": ["ponzu"]
+            },
+            {
+              "answer": "sauce",
+              "alternatives": ["sauce"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lobster_bisque",
+      "name": "Lobster Bisque",
+      "category": "Soup",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "• 12oz of smooth creamed soup (contains flour)",
+          "context": "• ___ of ___ ___ soup (contains flour)",
+          "individual_blanks": [
+            {
+              "answer": "12oz",
+              "alternatives": ["12oz", "12 oz", "twelve ounces"]
+            },
+            {
+              "answer": "smooth",
+              "alternatives": ["smooth"]
+            },
+            {
+              "answer": "creamed",
+              "alternatives": ["creamed", "cream"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Flavored with cognac and 2 oz of lobster",
+          "context": "• Flavored with ___ and ___ of lobster",
+          "individual_blanks": [
+            {
+              "answer": "cognac",
+              "alternatives": ["cognac"]
+            },
+            {
+              "answer": "2 oz",
+              "alternatives": ["2oz", "2 oz", "two ounces"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Finished with brandy whipped cream and chives",
+          "context": "• Finished with ___ ___ ___ and ___",
+          "individual_blanks": [
+            {
+              "answer": "brandy",
+              "alternatives": ["brandy"]
+            },
+            {
+              "answer": "whipped",
+              "alternatives": ["whipped"]
+            },
+            {
+              "answer": "cream",
+              "alternatives": ["cream"]
+            },
+            {
+              "answer": "chives",
+              "alternatives": ["chives"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Accompanied with a soup spoon and crostini",
+          "context": "• Accompanied with a ___ ___ and ___",
+          "individual_blanks": [
+            {
+              "answer": "soup",
+              "alternatives": ["soup"]
+            },
+            {
+              "answer": "spoon",
+              "alternatives": ["spoon"]
+            },
+            {
+              "answer": "crostini",
+              "alternatives": ["crostini"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "french_onion_soup",
+      "name": "French Onion Soup",
+      "category": "Soup",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "• 12oz portion of traditional taste and presentation with dark, rich broth",
+          "context": "• ___ portion of traditional taste and presentation with ___, ___ broth",
+          "individual_blanks": [
+            {
+              "answer": "12oz",
+              "alternatives": ["12oz", "12 oz", "twelve ounces"]
+            },
+            {
+              "answer": "dark",
+              "alternatives": ["dark"]
+            },
+            {
+              "answer": "rich",
+              "alternatives": ["rich"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Flavored with veal stock, sherry, and abundance of caramelized onions",
+          "context": "• Flavored with ___ ___, ___, and ___ of ___ onions",
+          "individual_blanks": [
+            {
+              "answer": "veal",
+              "alternatives": ["veal"]
+            },
+            {
+              "answer": "stock",
+              "alternatives": ["stock"]
+            },
+            {
+              "answer": "sherry",
+              "alternatives": ["sherry"]
+            },
+            {
+              "answer": "abundance",
+              "alternatives": ["abundance"]
+            },
+            {
+              "answer": "caramelized",
+              "alternatives": ["caramelized"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Served in a metal crock",
+          "context": "• Served in a ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "metal",
+              "alternatives": ["metal"]
+            },
+            {
+              "answer": "crock",
+              "alternatives": ["crock"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Topped with garlic cheese croutons and Swiss cheese (Gruyere is used at Arizona steakhouses)",
+          "context": "• Topped with ___ ___ ___ and ___ cheese (Gruyere is used at Arizona steakhouses)",
+          "individual_blanks": [
+            {
+              "answer": "garlic",
+              "alternatives": ["garlic"]
+            },
+            {
+              "answer": "cheese",
+              "alternatives": ["cheese"]
+            },
+            {
+              "answer": "croutons",
+              "alternatives": ["croutons"]
+            },
+            {
+              "answer": "Swiss",
+              "alternatives": ["swiss", "Swiss"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Accompanied with a soup spoon and crostini",
+          "context": "• Accompanied with a ___ ___ and ___",
+          "individual_blanks": [
+            {
+              "answer": "soup",
+              "alternatives": ["soup"]
+            },
+            {
+              "answer": "spoon",
+              "alternatives": ["spoon"]
+            },
+            {
+              "answer": "crostini",
+              "alternatives": ["crostini"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heirloom_tomato_burrata",
+      "name": "Heirloom Tomato & Burrata",
+      "category": "Salad",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "• 7 wedges of heirloom tomato (assorted colors) surrounding a 4oz ball of imported Italian burrata cheese",
+          "context": "• ___ wedges of heirloom tomato (assorted colors) ___ a ___ ball of imported ___ burrata cheese",
+          "individual_blanks": [
+            {
+              "answer": "7",
+              "alternatives": ["7", "seven"]
+            },
+            {
+              "answer": "surrounding",
+              "alternatives": ["surrounding"]
+            },
+            {
+              "answer": "4oz",
+              "alternatives": ["4oz", "4 oz"]
+            },
+            {
+              "answer": "Italian",
+              "alternatives": ["italian"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Served on a large round plate",
+          "context": "• Served on a ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "large",
+              "alternatives": ["large"]
+            },
+            {
+              "answer": "round",
+              "alternatives": ["round"]
+            },
+            {
+              "answer": "plate",
+              "alternatives": ["plate"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Seasoned with sea salt and black pepper",
+          "context": "• Seasoned with ___ ___ and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "sea",
+              "alternatives": ["sea"]
+            },
+            {
+              "answer": "salt",
+              "alternatives": ["salt"]
+            },
+            {
+              "answer": "black",
+              "alternatives": ["black"]
+            },
+            {
+              "answer": "pepper",
+              "alternatives": ["pepper"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Drizzled with extra virgin olive oil and a balsamic reduction",
+          "context": "• Drizzled with ___ ___ ___ ___ and a ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "extra",
+              "alternatives": ["extra"]
+            },
+            {
+              "answer": "virgin",
+              "alternatives": ["virgin"]
+            },
+            {
+              "answer": "olive",
+              "alternatives": ["olive"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            },
+            {
+              "answer": "balsamic",
+              "alternatives": ["balsamic"]
+            },
+            {
+              "answer": "reduction",
+              "alternatives": ["reduction"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Garnished with chopped oregano and a basil leaf",
+          "context": "• Garnished with ___ ___ and a ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "chopped",
+              "alternatives": ["chopped"]
+            },
+            {
+              "answer": "oregano",
+              "alternatives": ["oregano"]
+            },
+            {
+              "answer": "basil",
+              "alternatives": ["basil"]
+            },
+            {
+              "answer": "leaf",
+              "alternatives": ["leaf"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mastros_house_salad",
+      "name": "Mastro's House Salad",
+      "category": "Salad",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "• Chopped Iceberg lettuce",
+          "context": "• ___ ___ lettuce",
+          "individual_blanks": [
+            {
+              "answer": "Chopped",
+              "alternatives": ["chopped"]
+            },
+            {
+              "answer": "Iceberg",
+              "alternatives": ["iceberg"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Mixed with chopped hardboiled egg, roasted red peppers, red onion, tomato, blue cheese crumbles, Grana Padano cheese and a diced U-7 Black Tiger shrimp",
+          "context": "• Mixed with ___ ___ ___, ___ ___ ___, ___ ___, ___, ___ ___ ___, ___ ___ cheese and a ___ ___-___ ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "chopped",
+              "alternatives": ["chopped"]
+            },
+            {
+              "answer": "hardboiled",
+              "alternatives": ["hardboiled", "hard-boiled", "hard boiled"]
+            },
+            {
+              "answer": "egg",
+              "alternatives": ["egg"]
+            },
+            {
+              "answer": "roasted",
+              "alternatives": ["roasted"]
+            },
+            {
+              "answer": "red",
+              "alternatives": ["red"]
+            },
+            {
+              "answer": "peppers",
+              "alternatives": ["peppers", "pepper"]
+            },
+            {
+              "answer": "red",
+              "alternatives": ["red"]
+            },
+            {
+              "answer": "onion",
+              "alternatives": ["onion"]
+            },
+            {
+              "answer": "tomato",
+              "alternatives": ["tomato"]
+            },
+            {
+              "answer": "blue",
+              "alternatives": ["blue"]
+            },
+            {
+              "answer": "cheese",
+              "alternatives": ["cheese"]
+            },
+            {
+              "answer": "crumbles",
+              "alternatives": ["crumbles"]
+            },
+            {
+              "answer": "Grana",
+              "alternatives": ["grana"]
+            },
+            {
+              "answer": "Padano",
+              "alternatives": ["padano"]
+            },
+            {
+              "answer": "diced",
+              "alternatives": ["diced"]
+            },
+            {
+              "answer": "U",
+              "alternatives": ["u"]
+            },
+            {
+              "answer": "7",
+              "alternatives": ["7", "seven"]
+            },
+            {
+              "answer": "Black",
+              "alternatives": ["black"]
+            },
+            {
+              "answer": "Tiger",
+              "alternatives": ["tiger"]
+            },
+            {
+              "answer": "shrimp",
+              "alternatives": ["shrimp"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Seasoned with salt and black pepper",
+          "context": "• Seasoned with ___ and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "salt",
+              "alternatives": ["salt"]
+            },
+            {
+              "answer": "black",
+              "alternatives": ["black"]
+            },
+            {
+              "answer": "pepper",
+              "alternatives": ["pepper"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Tossed in a buttermilk blue cheese dressing",
+          "context": "• Tossed in a ___ ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "buttermilk",
+              "alternatives": ["buttermilk"]
+            },
+            {
+              "answer": "blue",
+              "alternatives": ["blue"]
+            },
+            {
+              "answer": "cheese",
+              "alternatives": ["cheese"]
+            },
+            {
+              "answer": "dressing",
+              "alternatives": ["dressing"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Served in a large bowl",
+          "context": "• Served in a ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "large",
+              "alternatives": ["large"]
+            },
+            {
+              "answer": "bowl",
+              "alternatives": ["bowl"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Topped with a U-7 Black Tiger shrimp",
+          "context": "• Topped with a ___-___ ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "U",
+              "alternatives": ["u"]
+            },
+            {
+              "answer": "7",
+              "alternatives": ["7", "seven"]
+            },
+            {
+              "answer": "Black",
+              "alternatives": ["black"]
+            },
+            {
+              "answer": "Tiger",
+              "alternatives": ["tiger"]
+            },
+            {
+              "answer": "shrimp",
+              "alternatives": ["shrimp"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Garnished with chopped parsley",
+          "context": "• Garnished with ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "chopped",
+              "alternatives": ["chopped"]
+            },
+            {
+              "answer": "parsley",
+              "alternatives": ["parsley"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caesar_salad",
+      "name": "Caesar Salad",
+      "category": "Salad",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "• Freshly cut Romaine hearts and Grana Padano cheese",
+          "context": "• Freshly cut ___ ___ and ___ ___ cheese",
+          "individual_blanks": [
+            {
+              "answer": "Romaine",
+              "alternatives": ["romaine"]
+            },
+            {
+              "answer": "hearts",
+              "alternatives": ["hearts"]
+            },
+            {
+              "answer": "Grana",
+              "alternatives": ["grana"]
+            },
+            {
+              "answer": "Padano",
+              "alternatives": ["padano"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Seasoned with salt and black pepper",
+          "context": "• Seasoned with ___ and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "salt",
+              "alternatives": ["salt"]
+            },
+            {
+              "answer": "black",
+              "alternatives": ["black"]
+            },
+            {
+              "answer": "pepper",
+              "alternatives": ["pepper"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Tossed with homemade Caesar dressing and warm homemade croutons",
+          "context": "• Tossed with ___ ___ ___ and ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "homemade",
+              "alternatives": ["homemade"]
+            },
+            {
+              "answer": "Caesar",
+              "alternatives": ["caesar"]
+            },
+            {
+              "answer": "dressing",
+              "alternatives": ["dressing"]
+            },
+            {
+              "answer": "warm",
+              "alternatives": ["warm"]
+            },
+            {
+              "answer": "homemade",
+              "alternatives": ["homemade"]
+            },
+            {
+              "answer": "croutons",
+              "alternatives": ["croutons"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Served in a large bowl",
+          "context": "• Served in a ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "large",
+              "alternatives": ["large"]
+            },
+            {
+              "answer": "bowl",
+              "alternatives": ["bowl"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Finished with Grana Padano cheese",
+          "context": "• Finished with ___ ___ cheese",
+          "individual_blanks": [
+            {
+              "answer": "Grana",
+              "alternatives": ["grana"]
+            },
+            {
+              "answer": "Padano",
+              "alternatives": ["padano"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spicy_mambo_salad",
+      "name": "Spicy Mambo Salad",
+      "category": "Salad",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "• Freshly cut Romaine hearts",
+          "context": "• Freshly cut ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Romaine",
+              "alternatives": ["romaine"]
+            },
+            {
+              "answer": "hearts",
+              "alternatives": ["hearts"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Seasoned with salt and black pepper",
+          "context": "• Seasoned with ___ and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "salt",
+              "alternatives": ["salt"]
+            },
+            {
+              "answer": "black",
+              "alternatives": ["black"]
+            },
+            {
+              "answer": "pepper",
+              "alternatives": ["pepper"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Tossed with mambo dressing and Grana Padano cheese",
+          "context": "• Tossed with ___ ___ and ___ ___ cheese",
+          "individual_blanks": [
+            {
+              "answer": "mambo",
+              "alternatives": ["mambo"]
+            },
+            {
+              "answer": "dressing",
+              "alternatives": ["dressing"]
+            },
+            {
+              "answer": "Grana",
+              "alternatives": ["grana"]
+            },
+            {
+              "answer": "Padano",
+              "alternatives": ["padano"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Served in a large bowl",
+          "context": "• Served in a ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "large",
+              "alternatives": ["large"]
+            },
+            {
+              "answer": "bowl",
+              "alternatives": ["bowl"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Finished with Grana Padano",
+          "context": "• Finished with ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Grana",
+              "alternatives": ["grana"]
+            },
+            {
+              "answer": "Padano",
+              "alternatives": ["padano"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chopped_iceberg_wedge",
+      "name": "Chopped Iceberg Wedge",
+      "category": "Salad",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "• 2 cups of chopped iceberg lettuce",
+          "context": "• ___ ___ of ___ ___ lettuce",
+          "individual_blanks": [
+            {
+              "answer": "2",
+              "alternatives": ["2", "two"]
+            },
+            {
+              "answer": "cups",
+              "alternatives": ["cups"]
+            },
+            {
+              "answer": "chopped",
+              "alternatives": ["chopped"]
+            },
+            {
+              "answer": "iceberg",
+              "alternatives": ["iceberg"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Served on a deep square plate",
+          "context": "• Served on a ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "deep",
+              "alternatives": ["deep"]
+            },
+            {
+              "answer": "square",
+              "alternatives": ["square"]
+            },
+            {
+              "answer": "plate",
+              "alternatives": ["plate"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Layered with creamy Buttermilk blue cheese dressing",
+          "context": "• Layered with creamy ___ ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Buttermilk",
+              "alternatives": ["buttermilk"]
+            },
+            {
+              "answer": "blue",
+              "alternatives": ["blue"]
+            },
+            {
+              "answer": "cheese",
+              "alternatives": ["cheese"]
+            },
+            {
+              "answer": "dressing",
+              "alternatives": ["dressing"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Topped with diced tomato, warm Applewood smoked bacon, hard-boiled egg and blue cheese crumbles",
+          "context": "• Topped with ___ ___, ___ ___ ___ ___, ___-___ ___ and ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "diced",
+              "alternatives": ["diced"]
+            },
+            {
+              "answer": "tomato",
+              "alternatives": ["tomato"]
+            },
+            {
+              "answer": "warm",
+              "alternatives": ["warm"]
+            },
+            {
+              "answer": "Applewood",
+              "alternatives": ["applewood"]
+            },
+            {
+              "answer": "smoked",
+              "alternatives": ["smoked"]
+            },
+            {
+              "answer": "bacon",
+              "alternatives": ["bacon"]
+            },
+            {
+              "answer": "hard",
+              "alternatives": ["hard"]
+            },
+            {
+              "answer": "boiled",
+              "alternatives": ["boiled"]
+            },
+            {
+              "answer": "egg",
+              "alternatives": ["egg"]
+            },
+            {
+              "answer": "blue",
+              "alternatives": ["blue"]
+            },
+            {
+              "answer": "cheese",
+              "alternatives": ["cheese"]
+            },
+            {
+              "answer": "crumbles",
+              "alternatives": ["crumbles"]
+            }
+          ]
+        },
+        {
+          "full_text": "• Garnished with chopped parsley",
+          "context": "• Garnished with ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "chopped",
+              "alternatives": ["chopped"]
+            },
+            {
+              "answer": "parsley",
+              "alternatives": ["parsley"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "balsamic_vinaigrette",
+      "name": "Balsamic Vinaigrette",
+      "category": "Dressing",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Balsamic vinegar, extra virgin olive oil, Dijon mustard, fresh chopped garlic, salt and black pepper",
+          "context": "___ vinegar, ___ ___ ___ ___, ___ mustard, fresh ___ ___, ___ and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Balsamic",
+              "alternatives": ["balsamic"]
+            },
+            {
+              "answer": "extra",
+              "alternatives": ["extra"]
+            },
+            {
+              "answer": "virgin",
+              "alternatives": ["virgin"]
+            },
+            {
+              "answer": "olive",
+              "alternatives": ["olive"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            },
+            {
+              "answer": "Dijon",
+              "alternatives": ["dijon"]
+            },
+            {
+              "answer": "chopped",
+              "alternatives": ["chopped"]
+            },
+            {
+              "answer": "garlic",
+              "alternatives": ["garlic"]
+            },
+            {
+              "answer": "salt",
+              "alternatives": ["salt"]
+            },
+            {
+              "answer": "black",
+              "alternatives": ["black"]
+            },
+            {
+              "answer": "pepper",
+              "alternatives": ["pepper"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "buttermilk_blue_cheese_dressing",
+      "name": "Buttermilk Blue Cheese",
+      "category": "Dressing",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Stella blue cheese crumbles, buttermilk, sour cream, mayonnaise, white wine vinegar, sugar, garlic powder, salt and black pepper",
+          "context": "Stella ___ ___ ___, ___, ___ ___, ___, ___ ___ ___, ___, ___ ___, ___ and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "blue",
+              "alternatives": ["blue"]
+            },
+            {
+              "answer": "cheese",
+              "alternatives": ["cheese"]
+            },
+            {
+              "answer": "crumbles",
+              "alternatives": ["crumbles"]
+            },
+            {
+              "answer": "buttermilk",
+              "alternatives": ["buttermilk"]
+            },
+            {
+              "answer": "sour",
+              "alternatives": ["sour"]
+            },
+            {
+              "answer": "cream",
+              "alternatives": ["cream"]
+            },
+            {
+              "answer": "mayonnaise",
+              "alternatives": ["mayonnaise", "mayo"]
+            },
+            {
+              "answer": "white",
+              "alternatives": ["white"]
+            },
+            {
+              "answer": "wine",
+              "alternatives": ["wine"]
+            },
+            {
+              "answer": "vinegar",
+              "alternatives": ["vinegar"]
+            },
+            {
+              "answer": "sugar",
+              "alternatives": ["sugar"]
+            },
+            {
+              "answer": "garlic",
+              "alternatives": ["garlic"]
+            },
+            {
+              "answer": "powder",
+              "alternatives": ["powder"]
+            },
+            {
+              "answer": "salt",
+              "alternatives": ["salt"]
+            },
+            {
+              "answer": "black",
+              "alternatives": ["black"]
+            },
+            {
+              "answer": "pepper",
+              "alternatives": ["pepper"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caesar_dressing",
+      "name": "Caesar",
+      "category": "Dressing",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Mayonnaise, fresh chopped garlic, capers, Dijon mustard, anchovies, Pecorino Romano, Grana Padano, extra virgin olive oil, red wine vinegar, salt and black pepper",
+          "context": "___, fresh ___ ___, ___, ___ mustard, ___, ___ ___, ___ ___, ___ ___ ___ ___, ___ ___ ___, ___ and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Mayonnaise",
+              "alternatives": ["mayonnaise", "mayo"]
+            },
+            {
+              "answer": "chopped",
+              "alternatives": ["chopped"]
+            },
+            {
+              "answer": "garlic",
+              "alternatives": ["garlic"]
+            },
+            {
+              "answer": "capers",
+              "alternatives": ["capers"]
+            },
+            {
+              "answer": "Dijon",
+              "alternatives": ["dijon"]
+            },
+            {
+              "answer": "anchovies",
+              "alternatives": ["anchovies"]
+            },
+            {
+              "answer": "Pecorino",
+              "alternatives": ["pecorino"]
+            },
+            {
+              "answer": "Romano",
+              "alternatives": ["romano"]
+            },
+            {
+              "answer": "Grana",
+              "alternatives": ["grana"]
+            },
+            {
+              "answer": "Padano",
+              "alternatives": ["padano"]
+            },
+            {
+              "answer": "extra",
+              "alternatives": ["extra"]
+            },
+            {
+              "answer": "virgin",
+              "alternatives": ["virgin"]
+            },
+            {
+              "answer": "olive",
+              "alternatives": ["olive"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            },
+            {
+              "answer": "red",
+              "alternatives": ["red"]
+            },
+            {
+              "answer": "wine",
+              "alternatives": ["wine"]
+            },
+            {
+              "answer": "vinegar",
+              "alternatives": ["vinegar"]
+            },
+            {
+              "answer": "salt",
+              "alternatives": ["salt"]
+            },
+            {
+              "answer": "black",
+              "alternatives": ["black"]
+            },
+            {
+              "answer": "pepper",
+              "alternatives": ["pepper"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "creamy_italian_dressing",
+      "name": "Creamy Italian",
+      "category": "Dressing",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Mayonnaise, sour cream, red wine vinegar, fresh chopped garlic, fresh white onion, dry oregano, dry basil, salt, black pepper, Coleman's dry mustard and whole milk",
+          "context": "___, ___ ___, ___ ___ ___, fresh ___ ___, fresh ___ ___, ___ ___, ___ ___, ___, ___ ___, ___'s ___ ___ and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Mayonnaise",
+              "alternatives": ["mayonnaise", "mayo"]
+            },
+            {
+              "answer": "sour",
+              "alternatives": ["sour"]
+            },
+            {
+              "answer": "cream",
+              "alternatives": ["cream"]
+            },
+            {
+              "answer": "red",
+              "alternatives": ["red"]
+            },
+            {
+              "answer": "wine",
+              "alternatives": ["wine"]
+            },
+            {
+              "answer": "vinegar",
+              "alternatives": ["vinegar"]
+            },
+            {
+              "answer": "chopped",
+              "alternatives": ["chopped"]
+            },
+            {
+              "answer": "garlic",
+              "alternatives": ["garlic"]
+            },
+            {
+              "answer": "white",
+              "alternatives": ["white"]
+            },
+            {
+              "answer": "onion",
+              "alternatives": ["onion"]
+            },
+            {
+              "answer": "dry",
+              "alternatives": ["dry"]
+            },
+            {
+              "answer": "oregano",
+              "alternatives": ["oregano"]
+            },
+            {
+              "answer": "dry",
+              "alternatives": ["dry"]
+            },
+            {
+              "answer": "basil",
+              "alternatives": ["basil"]
+            },
+            {
+              "answer": "salt",
+              "alternatives": ["salt"]
+            },
+            {
+              "answer": "black",
+              "alternatives": ["black"]
+            },
+            {
+              "answer": "pepper",
+              "alternatives": ["pepper"]
+            },
+            {
+              "answer": "Coleman",
+              "alternatives": ["coleman"]
+            },
+            {
+              "answer": "dry",
+              "alternatives": ["dry"]
+            },
+            {
+              "answer": "mustard",
+              "alternatives": ["mustard"]
+            },
+            {
+              "answer": "whole",
+              "alternatives": ["whole"]
+            },
+            {
+              "answer": "milk",
+              "alternatives": ["milk"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lemon_vinaigrette",
+      "name": "Lemon Vinaigrette",
+      "category": "Dressing",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Lemon juice, extra virgin olive oil, salt and black pepper",
+          "context": "___ ___, ___ ___ ___ ___, ___ and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Lemon",
+              "alternatives": ["lemon"]
+            },
+            {
+              "answer": "juice",
+              "alternatives": ["juice"]
+            },
+            {
+              "answer": "extra",
+              "alternatives": ["extra"]
+            },
+            {
+              "answer": "virgin",
+              "alternatives": ["virgin"]
+            },
+            {
+              "answer": "olive",
+              "alternatives": ["olive"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            },
+            {
+              "answer": "salt",
+              "alternatives": ["salt"]
+            },
+            {
+              "answer": "black",
+              "alternatives": ["black"]
+            },
+            {
+              "answer": "pepper",
+              "alternatives": ["pepper"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mambo_dressing",
+      "name": "Mambo",
+      "category": "Dressing",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Anchovies, pasteurized egg yolks, Dijon mustard, lemon juice, garlic, Worcestershire sauce, red wine vinegar, Cholula, atomic horseradish, Pecorino Romano, Grana Padano, bleu cheese crumbles, wasabi powder, pomace olive oil, salt and black pepper",
+          "context": "___, ___ ___ ___, ___ mustard, ___ ___, ___, ___ sauce, ___ ___ ___, ___, ___ ___, ___ ___, ___ ___, ___ ___ ___, ___ ___, ___ ___ ___, ___ and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Anchovies",
+              "alternatives": ["anchovies"]
+            },
+            {
+              "answer": "pasteurized",
+              "alternatives": ["pasteurized"]
+            },
+            {
+              "answer": "egg",
+              "alternatives": ["egg"]
+            },
+            {
+              "answer": "yolks",
+              "alternatives": ["yolks"]
+            },
+            {
+              "answer": "Dijon",
+              "alternatives": ["dijon"]
+            },
+            {
+              "answer": "lemon",
+              "alternatives": ["lemon"]
+            },
+            {
+              "answer": "juice",
+              "alternatives": ["juice"]
+            },
+            {
+              "answer": "garlic",
+              "alternatives": ["garlic"]
+            },
+            {
+              "answer": "Worcestershire",
+              "alternatives": ["worcestershire"]
+            },
+            {
+              "answer": "red",
+              "alternatives": ["red"]
+            },
+            {
+              "answer": "wine",
+              "alternatives": ["wine"]
+            },
+            {
+              "answer": "vinegar",
+              "alternatives": ["vinegar"]
+            },
+            {
+              "answer": "Cholula",
+              "alternatives": ["cholula"]
+            },
+            {
+              "answer": "atomic",
+              "alternatives": ["atomic"]
+            },
+            {
+              "answer": "horseradish",
+              "alternatives": ["horseradish"]
+            },
+            {
+              "answer": "Pecorino",
+              "alternatives": ["pecorino"]
+            },
+            {
+              "answer": "Romano",
+              "alternatives": ["romano"]
+            },
+            {
+              "answer": "Grana",
+              "alternatives": ["grana"]
+            },
+            {
+              "answer": "Padano",
+              "alternatives": ["padano"]
+            },
+            {
+              "answer": "bleu",
+              "alternatives": ["bleu", "blue"]
+            },
+            {
+              "answer": "cheese",
+              "alternatives": ["cheese"]
+            },
+            {
+              "answer": "crumbles",
+              "alternatives": ["crumbles"]
+            },
+            {
+              "answer": "wasabi",
+              "alternatives": ["wasabi"]
+            },
+            {
+              "answer": "powder",
+              "alternatives": ["powder"]
+            },
+            {
+              "answer": "pomace",
+              "alternatives": ["pomace"]
+            },
+            {
+              "answer": "olive",
+              "alternatives": ["olive"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            },
+            {
+              "answer": "salt",
+              "alternatives": ["salt"]
+            },
+            {
+              "answer": "black",
+              "alternatives": ["black"]
+            },
+            {
+              "answer": "pepper",
+              "alternatives": ["pepper"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ranch_dressing",
+      "name": "Ranch",
+      "category": "Dressing",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Mayonnaise, buttermilk, ranch mix",
+          "context": "___, ___, ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Mayonnaise",
+              "alternatives": ["mayonnaise", "mayo"]
+            },
+            {
+              "answer": "buttermilk",
+              "alternatives": ["buttermilk"]
+            },
+            {
+              "answer": "ranch",
+              "alternatives": ["ranch"]
+            },
+            {
+              "answer": "mix",
+              "alternatives": ["mix"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "red_wine_vinaigrette",
+      "name": "Red Wine Vinaigrette",
+      "category": "Dressing",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Aged red wine vinegar, extra virgin olive oil, salt and black pepper",
+          "context": "Aged ___ ___ ___, ___ ___ ___ ___, ___ and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "red",
+              "alternatives": ["red"]
+            },
+            {
+              "answer": "wine",
+              "alternatives": ["wine"]
+            },
+            {
+              "answer": "vinegar",
+              "alternatives": ["vinegar"]
+            },
+            {
+              "answer": "extra",
+              "alternatives": ["extra"]
+            },
+            {
+              "answer": "virgin",
+              "alternatives": ["virgin"]
+            },
+            {
+              "answer": "olive",
+              "alternatives": ["olive"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            },
+            {
+              "answer": "salt",
+              "alternatives": ["salt"]
+            },
+            {
+              "answer": "black",
+              "alternatives": ["black"]
+            },
+            {
+              "answer": "pepper",
+              "alternatives": ["pepper"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thousand_island",
+      "name": "Thousand Island",
+      "category": "Dressing",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Mayonnaise, cocktail sauce, sweet relish, hardboiled egg",
+          "context": "___, ___ ___, ___ ___, ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Mayonnaise",
+              "alternatives": ["mayonnaise", "mayo"]
+            },
+            {
+              "answer": "cocktail",
+              "alternatives": ["cocktail"]
+            },
+            {
+              "answer": "sauce",
+              "alternatives": ["sauce"]
+            },
+            {
+              "answer": "sweet",
+              "alternatives": ["sweet"]
+            },
+            {
+              "answer": "relish",
+              "alternatives": ["relish"]
+            },
+            {
+              "answer": "hardboiled",
+              "alternatives": ["hardboiled", "hard-boiled", "hard boiled"]
+            },
+            {
+              "answer": "egg",
+              "alternatives": ["egg"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "emulsified_red_wine_vinaigrette",
+      "name": "Emulsified Red Wine Vinaigrette | AZ",
+      "category": "Dressing",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Extra virgin olive oil, canola oil, red wine vinegar, salt, pepper, minced garlic, pasteurized egg yolk",
+          "context": "___ ___ ___ ___, ___ ___, ___ ___ ___, ___, ___, ___ ___, ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Extra",
+              "alternatives": ["extra"]
+            },
+            {
+              "answer": "virgin",
+              "alternatives": ["virgin"]
+            },
+            {
+              "answer": "olive",
+              "alternatives": ["olive"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            },
+            {
+              "answer": "canola",
+              "alternatives": ["canola"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            },
+            {
+              "answer": "red",
+              "alternatives": ["red"]
+            },
+            {
+              "answer": "wine",
+              "alternatives": ["wine"]
+            },
+            {
+              "answer": "vinegar",
+              "alternatives": ["vinegar"]
+            },
+            {
+              "answer": "salt",
+              "alternatives": ["salt"]
+            },
+            {
+              "answer": "pepper",
+              "alternatives": ["pepper"]
+            },
+            {
+              "answer": "minced",
+              "alternatives": ["minced"]
+            },
+            {
+              "answer": "garlic",
+              "alternatives": ["garlic"]
+            },
+            {
+              "answer": "pasteurized",
+              "alternatives": ["pasteurized"]
+            },
+            {
+              "answer": "egg",
+              "alternatives": ["egg"]
+            },
+            {
+              "answer": "yolk",
+              "alternatives": ["yolk"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sushi_rice",
+      "name": "Sushi Rice",
+      "category": "Sushi Ingredient",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Rice wine vinegar, mirin, sugar, kombu, and CalRose rice",
+          "context": "___ ___ ___, ___, ___, ___, and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Rice",
+              "alternatives": ["rice"]
+            },
+            {
+              "answer": "wine",
+              "alternatives": ["wine"]
+            },
+            {
+              "answer": "vinegar",
+              "alternatives": ["vinegar"]
+            },
+            {
+              "answer": "mirin",
+              "alternatives": ["mirin"]
+            },
+            {
+              "answer": "sugar",
+              "alternatives": ["sugar"]
+            },
+            {
+              "answer": "kombu",
+              "alternatives": ["kombu"]
+            },
+            {
+              "answer": "CalRose",
+              "alternatives": ["calrose", "cal rose"]
+            },
+            {
+              "answer": "rice",
+              "alternatives": ["rice"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tempura_batter",
+      "name": "Tempura Batter",
+      "category": "Sushi Ingredient",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Tempura flour mix, water, whole egg",
+          "context": "___ ___ ___, ___, ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Tempura",
+              "alternatives": ["tempura"]
+            },
+            {
+              "answer": "flour",
+              "alternatives": ["flour"]
+            },
+            {
+              "answer": "mix",
+              "alternatives": ["mix"]
+            },
+            {
+              "answer": "water",
+              "alternatives": ["water"]
+            },
+            {
+              "answer": "whole",
+              "alternatives": ["whole"]
+            },
+            {
+              "answer": "egg",
+              "alternatives": ["egg"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cilantro_vinaigrette",
+      "name": "Cilantro Vinaigrette",
+      "category": "Sushi Sauce",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Extra virgin olive oil, jalapeños, habanero, cilantro, sushi vinegar",
+          "context": "___ ___ ___ ___, ___, ___, ___, ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Extra",
+              "alternatives": ["extra"]
+            },
+            {
+              "answer": "virgin",
+              "alternatives": ["virgin"]
+            },
+            {
+              "answer": "olive",
+              "alternatives": ["olive"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            },
+            {
+              "answer": "jalapeños",
+              "alternatives": ["jalapenos", "jalapeño"]
+            },
+            {
+              "answer": "habanero",
+              "alternatives": ["habanero"]
+            },
+            {
+              "answer": "cilantro",
+              "alternatives": ["cilantro"]
+            },
+            {
+              "answer": "sushi",
+              "alternatives": ["sushi"]
+            },
+            {
+              "answer": "vinegar",
+              "alternatives": ["vinegar"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "curry_oil",
+      "name": "Curry Oil",
+      "category": "Sushi Sauce",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Curry powder, garlic and extra virgin olive oil",
+          "context": "___ ___, ___ and ___ ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Curry",
+              "alternatives": ["curry"]
+            },
+            {
+              "answer": "powder",
+              "alternatives": ["powder"]
+            },
+            {
+              "answer": "garlic",
+              "alternatives": ["garlic"]
+            },
+            {
+              "answer": "extra",
+              "alternatives": ["extra"]
+            },
+            {
+              "answer": "virgin",
+              "alternatives": ["virgin"]
+            },
+            {
+              "answer": "olive",
+              "alternatives": ["olive"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lobster_sauce",
+      "name": "Lobster Sauce",
+      "category": "Sushi Sauce",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Rice wine vinegar, canola oil, rayu chile oil, white onion, Coleman's dry mustard, lite soy sauce and whole eggs",
+          "context": "___ ___ ___, ___ ___, ___ ___ ___, ___ ___, ___'s ___ ___, ___ ___ ___ and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Rice",
+              "alternatives": ["rice"]
+            },
+            {
+              "answer": "wine",
+              "alternatives": ["wine"]
+            },
+            {
+              "answer": "vinegar",
+              "alternatives": ["vinegar"]
+            },
+            {
+              "answer": "canola",
+              "alternatives": ["canola"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            },
+            {
+              "answer": "rayu",
+              "alternatives": ["rayu"]
+            },
+            {
+              "answer": "chile",
+              "alternatives": ["chile", "chili"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            },
+            {
+              "answer": "white",
+              "alternatives": ["white"]
+            },
+            {
+              "answer": "onion",
+              "alternatives": ["onion"]
+            },
+            {
+              "answer": "Coleman",
+              "alternatives": ["coleman"]
+            },
+            {
+              "answer": "dry",
+              "alternatives": ["dry"]
+            },
+            {
+              "answer": "mustard",
+              "alternatives": ["mustard"]
+            },
+            {
+              "answer": "lite",
+              "alternatives": ["lite", "light"]
+            },
+            {
+              "answer": "soy",
+              "alternatives": ["soy"]
+            },
+            {
+              "answer": "sauce",
+              "alternatives": ["sauce"]
+            },
+            {
+              "answer": "whole",
+              "alternatives": ["whole"]
+            },
+            {
+              "answer": "eggs",
+              "alternatives": ["eggs", "egg"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ponzu_sauce",
+      "name": "Ponzu Sauce",
+      "category": "Sushi Sauce",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Citrus ponzu, mirin and soy sauce",
+          "context": "___ ___, ___ and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Citrus",
+              "alternatives": ["citrus"]
+            },
+            {
+              "answer": "ponzu",
+              "alternatives": ["ponzu"]
+            },
+            {
+              "answer": "mirin",
+              "alternatives": ["mirin"]
+            },
+            {
+              "answer": "soy",
+              "alternatives": ["soy"]
+            },
+            {
+              "answer": "sauce",
+              "alternatives": ["sauce"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ponzu_truffle_oil",
+      "name": "Ponzu Truffle Oil",
+      "category": "Sushi Sauce",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Citrus ponzu, mirin, soy sauce, white truffle oil and Kombu leaf",
+          "context": "___ ___, ___, ___ ___, ___ ___ ___ and ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Citrus",
+              "alternatives": ["citrus"]
+            },
+            {
+              "answer": "ponzu",
+              "alternatives": ["ponzu"]
+            },
+            {
+              "answer": "mirin",
+              "alternatives": ["mirin"]
+            },
+            {
+              "answer": "soy",
+              "alternatives": ["soy"]
+            },
+            {
+              "answer": "sauce",
+              "alternatives": ["sauce"]
+            },
+            {
+              "answer": "white",
+              "alternatives": ["white"]
+            },
+            {
+              "answer": "truffle",
+              "alternatives": ["truffle"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            },
+            {
+              "answer": "Kombu",
+              "alternatives": ["kombu"]
+            },
+            {
+              "answer": "leaf",
+              "alternatives": ["leaf"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spicy_mayo",
+      "name": "Spicy Mayo",
+      "category": "Sushi Sauce",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Mayonnaise, sriracha, togarashi, masago, chile de arbol, sesame oil, miso, sugar and Cholula",
+          "context": "___, ___, ___, ___, ___ ___ ___, ___ ___, ___, ___ and ___",
+          "individual_blanks": [
+            {
+              "answer": "Mayonnaise",
+              "alternatives": ["mayonnaise", "mayo"]
+            },
+            {
+              "answer": "sriracha",
+              "alternatives": ["sriracha"]
+            },
+            {
+              "answer": "togarashi",
+              "alternatives": ["togarashi"]
+            },
+            {
+              "answer": "masago",
+              "alternatives": ["masago"]
+            },
+            {
+              "answer": "chile",
+              "alternatives": ["chile", "chili"]
+            },
+            {
+              "answer": "de",
+              "alternatives": ["de"]
+            },
+            {
+              "answer": "arbol",
+              "alternatives": ["arbol"]
+            },
+            {
+              "answer": "sesame",
+              "alternatives": ["sesame"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            },
+            {
+              "answer": "miso",
+              "alternatives": ["miso"]
+            },
+            {
+              "answer": "sugar",
+              "alternatives": ["sugar"]
+            },
+            {
+              "answer": "Cholula",
+              "alternatives": ["cholula"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tostada_sauce",
+      "name": "Tostada Sauce",
+      "category": "Sushi Sauce",
+      "status": "active",
+      "description_lines": [
+        {
+          "full_text": "Soy sauce, chili oil and extra virgin olive oil",
+          "context": "___ ___, ___ ___ and ___ ___ ___ ___",
+          "individual_blanks": [
+            {
+              "answer": "Soy",
+              "alternatives": ["soy"]
+            },
+            {
+              "answer": "sauce",
+              "alternatives": ["sauce"]
+            },
+            {
+              "answer": "chili",
+              "alternatives": ["chili", "chile"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            },
+            {
+              "answer": "extra",
+              "alternatives": ["extra"]
+            },
+            {
+              "answer": "virgin",
+              "alternatives": ["virgin"]
+            },
+            {
+              "answer": "olive",
+              "alternatives": ["olive"]
+            },
+            {
+              "answer": "oil",
+              "alternatives": ["oil"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

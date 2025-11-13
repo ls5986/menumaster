@@ -1,0 +1,515 @@
+{
+  "customer_questions": [
+    {
+      "item": "Ahi Tuna Tostada",
+      "question": "How many tostadas come in an order?",
+      "answer": "3 tostadas per order",
+      "category": "Sushi Selection",
+      "alternatives": ["3", "three", "3 tostadas"]
+    },
+    {
+      "item": "Ahi Tuna Tostada",
+      "question": "What kind of tuna is on the tostada?",
+      "answer": "Finely chopped raw sashimi grade Bigeye",
+      "category": "Sushi Selection",
+      "alternatives": ["finely chopped bigeye", "sashimi grade bigeye tuna", "bigeye"]
+    },
+    {
+      "item": "Ahi Tuna Tostada",
+      "question": "What's the base of the tostada?",
+      "answer": "wonton chip",
+      "category": "Sushi Selection",
+      "alternatives": ["wonton", "crisp wonton chip"]
+    },
+    {
+      "item": "Ahi Tuna Tostada",
+      "question": "What sauce is drizzled on the tostada?",
+      "answer": "tostada sauce",
+      "category": "Sushi Selection",
+      "alternatives": ["tostada"]
+    },
+    {
+      "item": "Crispy Garlic Tuna Sashimi",
+      "question": "How many pieces of tuna do you get?",
+      "answer": "9 pieces",
+      "category": "Sushi Selection",
+      "alternatives": ["9", "nine", "nine pieces"]
+    },
+    {
+      "item": "Crispy Garlic Tuna Sashimi",
+      "question": "What kind of tuna do you use?",
+      "answer": "sashimi grade Bigeye tuna",
+      "category": "Sushi Selection",
+      "alternatives": ["bigeye tuna", "sashimi grade bigeye", "bigeye"]
+    },
+    {
+      "item": "Crispy Garlic Tuna Sashimi",
+      "question": "What's on top of each piece?",
+      "answer": "garlic chip",
+      "category": "Sushi Selection",
+      "alternatives": ["fried garlic chip", "garlic chips"]
+    },
+    {
+      "item": "Crispy Garlic Tuna Sashimi",
+      "question": "What sauces is it drizzled with?",
+      "answer": "curry oil and ponzu sauce",
+      "category": "Sushi Selection",
+      "alternatives": ["curry oil, ponzu", "ponzu and curry oil"]
+    },
+    {
+      "item": "Hamachi with Crispy Onions",
+      "question": "How many pieces of Hamachi?",
+      "answer": "9 pieces",
+      "category": "Sushi Selection",
+      "alternatives": ["9", "nine", "nine pieces"]
+    },
+    {
+      "item": "Hamachi with Crispy Onions",
+      "question": "What fish is this?",
+      "answer": "Hamachi",
+      "category": "Sushi Selection",
+      "alternatives": ["yellowtail", "hamachi yellowtail"]
+    },
+    {
+      "item": "Hamachi with Crispy Onions",
+      "question": "What comes on top?",
+      "answer": "crispy onions",
+      "category": "Sushi Selection",
+      "alternatives": ["fried onions", "crispy fried onions"]
+    },
+    {
+      "item": "Seared Albacore with Black Truffles",
+      "question": "How many pieces of Albacore?",
+      "answer": "9 pieces",
+      "category": "Sushi Selection",
+      "alternatives": ["9", "nine", "nine pieces"]
+    },
+    {
+      "item": "Seared Albacore with Black Truffles",
+      "question": "What oil is it drizzled with?",
+      "answer": "ponzu truffle oil",
+      "category": "Sushi Selection",
+      "alternatives": ["ponzu truffle", "truffle ponzu oil"]
+    },
+    {
+      "item": "Maguro Lime Roll",
+      "question": "How many pieces is the Maguro Lime Roll?",
+      "answer": "8 pieces",
+      "category": "Sushi Selection",
+      "alternatives": ["8", "eight", "eight pieces"]
+    },
+    {
+      "item": "Maguro Lime Roll",
+      "question": "What's inside the roll?",
+      "answer": "spicy tuna",
+      "category": "Sushi Selection",
+      "alternatives": ["spicy tuna mix"]
+    },
+    {
+      "item": "Maguro Lime Roll",
+      "question": "What's the roll topped with?",
+      "answer": "Bigeye tuna and avocado",
+      "category": "Sushi Selection",
+      "alternatives": ["bigeye tuna, avocado", "tuna and avocado"]
+    },
+    {
+      "item": "Clear Lobster Roll",
+      "question": "What kind of lobster is used?",
+      "answer": "Slipper lobster tail",
+      "category": "Sushi Selection",
+      "alternatives": ["slipper lobster"]
+    },
+    {
+      "item": "Clear Lobster Roll",
+      "question": "How is the lobster prepared?",
+      "answer": "dipped in tempura batter then fried",
+      "category": "Sushi Selection",
+      "alternatives": ["tempura fried", "fried in tempura batter"]
+    },
+    {
+      "item": "Clear Lobster Roll",
+      "question": "How many pieces in the Lobster Roll?",
+      "answer": "8 pieces",
+      "category": "Sushi Selection",
+      "alternatives": ["8", "eight", "eight pieces"]
+    },
+    {
+      "item": "Clear Lobster Roll",
+      "question": "What sauce is drizzled on the lobster roll?",
+      "answer": "curry oil",
+      "category": "Sushi Selection",
+      "alternatives": ["curried oil"]
+    },
+    {
+      "item": "Clear Lobster Roll",
+      "question": "What's it garnished with?",
+      "answer": "carrot curls and black sesame seeds",
+      "category": "Sushi Selection",
+      "alternatives": ["carrot curls, black sesame seeds"]
+    },
+    {
+      "item": "Veggie Roll",
+      "question": "How is the asparagus prepared?",
+      "answer": "dipped in tempura batter then fried",
+      "category": "Sushi Selection",
+      "alternatives": ["tempura fried", "fried in tempura"]
+    },
+    {
+      "item": "Veggie Roll",
+      "question": "What vegetables are in the Veggie Roll?",
+      "answer": "asparagus, cucumber, yamagobo, avocado, red leaf lettuce",
+      "category": "Sushi Selection",
+      "alternatives": ["asparagus, cucumber, avocado, lettuce", "asparagus cucumber yamagobo avocado lettuce"]
+    },
+    {
+      "item": "Veggie Roll",
+      "question": "How many pieces is the Veggie Roll?",
+      "answer": "8 pieces",
+      "category": "Sushi Selection",
+      "alternatives": ["8", "eight", "eight pieces"]
+    },
+    {
+      "item": "Veggie Roll",
+      "question": "What sauce comes with the Veggie Roll?",
+      "answer": "spicy mayo",
+      "category": "Sushi Selection",
+      "alternatives": ["spicy mayonnaise"]
+    },
+    {
+      "item": "King Crab Roll",
+      "question": "What kind of crab is in this roll?",
+      "answer": "King Crab",
+      "category": "Sushi Selection",
+      "alternatives": ["king crab meat"]
+    },
+    {
+      "item": "King Crab Roll",
+      "question": "How many pieces in the King Crab Roll?",
+      "answer": "8 pieces",
+      "category": "Sushi Selection",
+      "alternatives": ["8", "eight", "eight pieces"]
+    },
+    {
+      "item": "King Crab Roll",
+      "question": "What's the nori wrapper made of?",
+      "answer": "seaweed wrap",
+      "category": "Sushi Selection",
+      "alternatives": ["seaweed", "nori seaweed"]
+    },
+    {
+      "item": "King Crab Roll",
+      "question": "What vegetables are in the King Crab Roll?",
+      "answer": "cucumber and cream cheese",
+      "category": "Sushi Selection",
+      "alternatives": ["cucumber, cream cheese"]
+    },
+    {
+      "item": "A5 Wagyu Beef Roll",
+      "question": "How much wagyu is in each roll?",
+      "answer": "1.5oz",
+      "category": "Sushi Selection",
+      "alternatives": ["1.5 oz", "one and a half ounces"]
+    },
+    {
+      "item": "A5 Wagyu Beef Roll",
+      "question": "How many pieces do I get?",
+      "answer": "8 pieces",
+      "category": "Sushi Selection",
+      "alternatives": ["8", "eight", "eight pieces"]
+    },
+    {
+      "item": "A5 Wagyu Beef Roll",
+      "question": "What sauces are on this roll?",
+      "answer": "ponzu sauce",
+      "category": "Sushi Selection",
+      "alternatives": ["ponzu"]
+    },
+    {
+      "item": "A5 Wagyu Beef Roll",
+      "question": "What's on top of the wagyu roll?",
+      "answer": "Serrano Chile slices",
+      "category": "Sushi Selection",
+      "alternatives": ["serrano chile", "serrano chiles"]
+    },
+    {
+      "item": "A5 Wagyu Beef Roll",
+      "question": "How is the wagyu seasoned?",
+      "answer": "seasoned with sea salt and lightly brulee'd",
+      "category": "Sushi Selection",
+      "alternatives": ["sea salt and bruleed", "sea salt, bruleed"]
+    },
+    {
+      "item": "Lobster Bisque",
+      "question": "How big is the Lobster Bisque?",
+      "answer": "12oz",
+      "category": "Soup",
+      "alternatives": ["12 oz", "twelve ounces", "12 ounces"]
+    },
+    {
+      "item": "Lobster Bisque",
+      "question": "Does the Lobster Bisque contain flour?",
+      "answer": "Yes, it contains flour",
+      "category": "Soup",
+      "alternatives": ["yes", "it contains flour", "contains flour"]
+    },
+    {
+      "item": "Lobster Bisque",
+      "question": "What comes with the Lobster Bisque?",
+      "answer": "soup spoon and crostini",
+      "category": "Soup",
+      "alternatives": ["crostini and soup spoon", "spoon and crostini"]
+    },
+    {
+      "item": "New England Clam Chowder",
+      "question": "What size is the Clam Chowder?",
+      "answer": "12oz",
+      "category": "Soup",
+      "alternatives": ["12 oz", "twelve ounces", "12 ounces"]
+    },
+    {
+      "item": "New England Clam Chowder",
+      "question": "What kind of clams are in the chowder?",
+      "answer": "chopped clams",
+      "category": "Soup",
+      "alternatives": ["clams", "chopped"]
+    },
+    {
+      "item": "New England Clam Chowder",
+      "question": "Is the Clam Chowder creamy?",
+      "answer": "Yes, it's a creamy soup",
+      "category": "Soup",
+      "alternatives": ["yes", "creamy", "it's creamy"]
+    },
+    {
+      "item": "French Onion Soup",
+      "question": "What size is the French Onion Soup?",
+      "answer": "12oz",
+      "category": "Soup",
+      "alternatives": ["12 oz", "twelve ounces", "12 ounces"]
+    },
+    {
+      "item": "French Onion Soup",
+      "question": "What's on top of the French Onion Soup?",
+      "answer": "Swiss and Parmesan cheese",
+      "category": "Soup",
+      "alternatives": ["swiss and parmesan", "cheese"]
+    },
+    {
+      "item": "French Onion Soup",
+      "question": "What's the bread in the soup?",
+      "answer": "crostini",
+      "category": "Soup",
+      "alternatives": ["toasted bread", "crouton"]
+    },
+    {
+      "item": "Heirloom Tomato & Burrata",
+      "question": "What kind of cheese is in this salad?",
+      "answer": "Burrata",
+      "category": "Salad",
+      "alternatives": ["burrata cheese"]
+    },
+    {
+      "item": "Heirloom Tomato & Burrata",
+      "question": "What dressing is on the Heirloom Tomato salad?",
+      "answer": "Balsamic Vinaigrette",
+      "category": "Salad",
+      "alternatives": ["balsamic"]
+    },
+    {
+      "item": "Chopped Salad",
+      "question": "What's the blue cheese in the Chopped Salad?",
+      "answer": "Maytag blue cheese",
+      "category": "Salad",
+      "alternatives": ["maytag blue", "maytag"]
+    },
+    {
+      "item": "Chopped Salad",
+      "question": "What meats are in the Chopped Salad?",
+      "answer": "applewood smoked bacon and salami",
+      "category": "Salad",
+      "alternatives": ["bacon and salami", "applewood bacon, salami"]
+    },
+    {
+      "item": "Mastro's House Salad",
+      "question": "What greens are in the House Salad?",
+      "answer": "romaine and butter lettuce",
+      "category": "Salad",
+      "alternatives": ["romaine, butter lettuce", "romaine and butter"]
+    },
+    {
+      "item": "Mastro's House Salad",
+      "question": "What vegetables are in the House Salad?",
+      "answer": "tomatoes and red onions",
+      "category": "Salad",
+      "alternatives": ["tomatoes, red onions"]
+    },
+    {
+      "item": "Caesar Salad",
+      "question": "What dressing is on the Caesar?",
+      "answer": "Caesar",
+      "category": "Salad",
+      "alternatives": ["caesar dressing"]
+    },
+    {
+      "item": "Caesar Salad",
+      "question": "What comes on top of the Caesar?",
+      "answer": "Homemade Croutons",
+      "category": "Salad",
+      "alternatives": ["croutons", "housemade croutons"]
+    },
+    {
+      "item": "Caesar Salad",
+      "question": "Does the Caesar have anchovies?",
+      "answer": "Yes, Parmesan cheese and anchovies",
+      "category": "Salad",
+      "alternatives": ["yes", "anchovies", "it has anchovies"]
+    },
+    {
+      "item": "Spicy Mambo Salad",
+      "question": "What makes the Mambo Salad spicy?",
+      "answer": "jalapeño",
+      "category": "Salad",
+      "alternatives": ["jalapeno", "jalapeños"]
+    },
+    {
+      "item": "Spicy Mambo Salad",
+      "question": "What cheese is in the Mambo Salad?",
+      "answer": "Gorgonzola",
+      "category": "Salad",
+      "alternatives": ["gorgonzola cheese"]
+    },
+    {
+      "item": "Chopped Iceberg Wedge",
+      "question": "What's the lettuce in the Wedge?",
+      "answer": "iceberg lettuce",
+      "category": "Salad",
+      "alternatives": ["iceberg"]
+    },
+    {
+      "item": "Chopped Iceberg Wedge",
+      "question": "What dressing options for the Wedge?",
+      "answer": "Buttermilk Blue Cheese or Ranch",
+      "category": "Salad",
+      "alternatives": ["blue cheese or ranch", "buttermilk blue cheese, ranch"]
+    },
+    {
+      "item": "Balsamic Vinaigrette",
+      "question": "What are the main ingredients in the Balsamic Vinaigrette?",
+      "answer": "Balsamic vinegar, extra virgin olive oil, Dijon mustard",
+      "category": "Dressing",
+      "alternatives": ["balsamic vinegar, olive oil, mustard", "vinegar, oil, dijon"]
+    },
+    {
+      "item": "Buttermilk Blue Cheese",
+      "question": "What cheese is in this dressing?",
+      "answer": "blue cheese",
+      "category": "Dressing",
+      "alternatives": ["bleu cheese"]
+    },
+    {
+      "item": "Buttermilk Blue Cheese",
+      "question": "What's the base of the Blue Cheese dressing?",
+      "answer": "mayonnaise base",
+      "category": "Dressing",
+      "alternatives": ["mayo", "mayonnaise"]
+    },
+    {
+      "item": "Caesar",
+      "question": "What's the Caesar dressing made with?",
+      "answer": "egg yolk base",
+      "category": "Dressing",
+      "alternatives": ["egg yolk", "egg yolks"]
+    },
+    {
+      "item": "Caesar",
+      "question": "Does Caesar dressing have anchovies?",
+      "answer": "Yes, Parmesan cheese and anchovies",
+      "category": "Dressing",
+      "alternatives": ["yes", "anchovies"]
+    },
+    {
+      "item": "Creamy Italian",
+      "question": "What makes it creamy?",
+      "answer": "mayonnaise base",
+      "category": "Dressing",
+      "alternatives": ["mayo", "mayonnaise"]
+    },
+    {
+      "item": "Lemon Vinaigrette",
+      "question": "What citrus is in this dressing?",
+      "answer": "fresh lemon juice",
+      "category": "Dressing",
+      "alternatives": ["lemon juice", "lemon"]
+    },
+    {
+      "item": "Mambo",
+      "question": "What makes Mambo dressing spicy?",
+      "answer": "jalapeño",
+      "category": "Dressing",
+      "alternatives": ["jalapeno", "jalapeños"]
+    },
+    {
+      "item": "Ranch",
+      "question": "What herbs are in Ranch?",
+      "answer": "parsley, dill and chives",
+      "category": "Dressing",
+      "alternatives": ["parsley, dill, chives"]
+    },
+    {
+      "item": "Thousand Island",
+      "question": "What's the sweet part of Thousand Island?",
+      "answer": "sweet pickle relish",
+      "category": "Dressing",
+      "alternatives": ["pickle relish", "relish"]
+    },
+    {
+      "item": "Spicy Mayo",
+      "question": "What makes the mayo spicy?",
+      "answer": "Sriracha",
+      "category": "Sauce",
+      "alternatives": ["sriracha sauce"]
+    },
+    {
+      "item": "Tostada Sauce",
+      "question": "What are the ingredients in Tostada Sauce?",
+      "answer": "Soy sauce, chili oil, extra virgin olive oil",
+      "category": "Sauce",
+      "alternatives": ["soy sauce, chili oil, olive oil"]
+    },
+    {
+      "item": "Ponzu Sauce",
+      "question": "What citrus is in Ponzu?",
+      "answer": "Key lime juice",
+      "category": "Sauce",
+      "alternatives": ["key lime", "lime juice"]
+    },
+    {
+      "item": "Curry Oil",
+      "question": "What oil is the base?",
+      "answer": "vegetable oil",
+      "category": "Sauce",
+      "alternatives": ["vegetable"]
+    },
+    {
+      "item": "Lobster Sauce",
+      "question": "What vinegar is in the Lobster Sauce?",
+      "answer": "Rice wine vinegar",
+      "category": "Sauce",
+      "alternatives": ["rice wine", "rice vinegar"]
+    },
+    {
+      "item": "Cilantro Vinaigrette",
+      "question": "What herb is this made with?",
+      "answer": "cilantro",
+      "category": "Sauce",
+      "alternatives": ["fresh cilantro"]
+    },
+    {
+      "item": "Pickled Red Onions",
+      "question": "What pepper is in pickled red onions?",
+      "answer": "habanero",
+      "category": "Sushi Component",
+      "alternatives": ["habanero pepper"]
+    }
+  ]
+}

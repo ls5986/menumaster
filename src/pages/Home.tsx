@@ -151,50 +151,6 @@ export function Home({ onStartStudy }: HomeProps) {
             </div>
           </Card>
 
-          <Card hover onClick={() => onStartStudy('multiple-choice')}>
-            <div className="flex items-start gap-3">
-              <div className="p-3 bg-warning/20 rounded-lg">
-                <ListChecks className="text-warning" size={24} />
-              </div>
-              <div className="flex-1">
-                <h3 className="font-bold text-lg mb-1">Multiple Choice</h3>
-                <p className="text-text-secondary text-sm mb-2">
-                  Choose the correct answer from 4 options.
-                </p>
-                <Badge variant="success" size="sm">All Questions</Badge>
-              </div>
-            </div>
-          </Card>
-
-          <Card hover onClick={() => onStartStudy('practice-test')}>
-            <div className="flex items-start gap-3">
-              <div className="p-3 bg-incorrect/20 rounded-lg">
-                <Target className="text-incorrect" size={24} />
-              </div>
-              <div className="flex-1">
-                <h3 className="font-bold text-lg mb-1">Practice Test</h3>
-                <p className="text-text-secondary text-sm mb-2">
-                  Full test mode - all multiple choice questions.
-                </p>
-                <Badge variant="warning" size="sm">Challenge</Badge>
-              </div>
-            </div>
-          </Card>
-
-          <Card hover onClick={() => onStartStudy('speedrun')}>
-            <div className="flex items-start gap-3">
-              <div className="p-3 bg-accent-blue/20 rounded-lg">
-                <Zap className="text-accent-gold" size={24} />
-              </div>
-              <div className="flex-1">
-                <h3 className="font-bold text-lg mb-1">Speedrun</h3>
-                <p className="text-text-secondary text-sm mb-2">
-                  How fast can you answer all questions correctly?
-                </p>
-                <Badge variant="warning" size="sm">Timed</Badge>
-              </div>
-            </div>
-          </Card>
 
           <Card className="bg-bg-tertiary/50 border-dashed">
             <div className="text-center py-4">

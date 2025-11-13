@@ -68,12 +68,12 @@ export function TestMode({ categoryFilter, onComplete }: TestModeProps) {
             }
           }
         }}
-        className={`inline-block mx-1 px-2 py-1 text-center font-medium transition-all
+        className={`inline-block mx-0.5 sm:mx-1 px-1.5 sm:px-2 py-1 sm:py-1.5 text-center text-sm sm:text-base font-medium transition-all
           ${showAnswers ? 'bg-correct/10 border-correct text-correct' : 'bg-bg-tertiary'}
           ${!showAnswers && userValue && isCorrect ? 'border-correct bg-correct/10' : ''}
           ${!showAnswers && userValue && !isCorrect ? 'border-incorrect bg-incorrect/10' : ''}
-          border-b-2 focus:outline-none focus:ring-2 focus:ring-accent-gold rounded-sm`}
-        style={{ width: `${inputWidth}ch` }}
+          border-b-2 focus:outline-none focus:ring-2 focus:ring-accent-gold rounded-sm touch-manipulation`}
+        style={{ width: `min(${inputWidth}ch, 90vw)`, minWidth: '60px' }}
         placeholder={showAnswers ? word : '_'.repeat(Math.min(word.length, 12))}
         disabled={showAnswers}
         autoComplete="off"
@@ -205,10 +205,10 @@ export function TestMode({ categoryFilter, onComplete }: TestModeProps) {
     const textParts = context.split('___');
     
     return (
-      <p className="text-xl leading-relaxed flex flex-wrap items-center gap-1">
+      <p className="text-base sm:text-xl leading-relaxed flex flex-wrap items-center gap-1">
         {textParts.map((part, partIdx) => (
           <span key={`part-${partIdx}`} className="inline-flex items-center flex-wrap">
-            <span>{part}</span>
+            <span className="break-words">{part}</span>
             {partIdx < individualBlanks.length && renderSingleBlank(
               individualBlanks[partIdx], 
               partIdx,
@@ -321,25 +321,25 @@ export function TestMode({ categoryFilter, onComplete }: TestModeProps) {
   }
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto px-3 sm:px-4">
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h1 className="text-2xl font-bold mb-1">📝 Menu Practice Test</h1>
-          <p className="text-text-secondary text-sm">
+      <div className="flex items-center justify-between mb-4 sm:mb-6 gap-3">
+        <div className="flex-1 min-w-0">
+          <h1 className="text-lg sm:text-2xl font-bold mb-1 truncate">📝 Menu Practice Test</h1>
+          <p className="text-text-secondary text-xs sm:text-sm hidden sm:block">
             Fill in the blanks - type each underlined word
           </p>
         </div>
-        <div className="text-right">
-          <p className="text-sm text-text-secondary mb-1">Progress</p>
-          <p className="text-lg font-bold">
+        <div className="text-right flex-shrink-0">
+          <p className="text-xs sm:text-sm text-text-secondary mb-0.5">Progress</p>
+          <p className="text-base sm:text-lg font-bold whitespace-nowrap">
             {currentIndex + 1}/{questions.length}
           </p>
         </div>
       </div>
 
       {/* Progress bar */}
-      <ProgressBar progress={progress} className="mb-8" />
+      <ProgressBar progress={progress} className="mb-4 sm:mb-8" />
 
       {/* Test Item */}
       <AnimatePresence mode="wait">
@@ -350,20 +350,20 @@ export function TestMode({ categoryFilter, onComplete }: TestModeProps) {
           exit={{ opacity: 0, x: -20 }}
           transition={{ duration: 0.3 }}
         >
-          <Card className="mb-6">
+          <Card className="mb-4 sm:mb-6 p-4 sm:p-6">
             {/* Item Header */}
-            <div className="border-b border-bg-tertiary pb-4 mb-6">
-              <div className="flex items-start justify-between mb-2">
-                <div>
-                  <h2 className="text-2xl font-bold text-accent-gold mb-2">
+            <div className="border-b border-bg-tertiary pb-3 sm:pb-4 mb-4 sm:mb-6">
+              <div className="flex items-start justify-between mb-2 gap-2">
+                <div className="flex-1 min-w-0">
+                  <h2 className="text-lg sm:text-2xl font-bold text-accent-gold mb-2 break-words">
                     {currentQuestion.itemName}
                   </h2>
                   <Badge variant="info">{currentQuestion.category}</Badge>
                 </div>
                 {showAnswers && (
-                  <div className="text-right">
-                    <p className="text-sm text-text-secondary">Score</p>
-                    <p className="text-2xl font-bold text-accent-gold">
+                  <div className="text-right flex-shrink-0">
+                    <p className="text-xs sm:text-sm text-text-secondary">Score</p>
+                    <p className="text-lg sm:text-2xl font-bold text-accent-gold whitespace-nowrap">
                       {sessionScore}/{currentIndex + 1}
                     </p>
                   </div>
@@ -372,8 +372,8 @@ export function TestMode({ categoryFilter, onComplete }: TestModeProps) {
             </div>
 
             {/* Test Line */}
-            <div className="mb-6">
-              <div className="bg-bg-tertiary/30 rounded-lg p-6 border-l-4 border-accent-gold">
+            <div className="mb-4 sm:mb-6">
+              <div className="bg-bg-tertiary/30 rounded-lg p-4 sm:p-6 border-l-4 border-accent-gold">
                 {renderLineWithBlanks()}
               </div>
 
@@ -414,20 +414,23 @@ export function TestMode({ categoryFilter, onComplete }: TestModeProps) {
             </div>
 
             {/* Controls */}
-            <div className="flex items-center justify-between gap-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 sm:gap-4">
               <Button
                 variant="secondary"
                 onClick={handlePreviousItem}
                 disabled={currentIndex === 0}
-                icon={<ChevronLeft size={20} />}
+                icon={<ChevronLeft size={18} />}
+                className="text-sm sm:text-base"
               >
-                Previous
+                <span className="hidden sm:inline">Previous</span>
+                <span className="sm:hidden">Prev</span>
               </Button>
 
               {!showAnswers ? (
                 <Button
                   variant="primary"
                   onClick={handleCheckAnswers}
+                  className="text-sm sm:text-base order-first sm:order-none"
                 >
                   Check Answers
                 </Button>
@@ -435,7 +438,8 @@ export function TestMode({ categoryFilter, onComplete }: TestModeProps) {
                 <Button
                   variant="secondary"
                   onClick={() => setShowAnswers(false)}
-                  icon={<EyeOff size={20} />}
+                  icon={<EyeOff size={18} />}
+                  className="text-sm sm:text-base order-first sm:order-none"
                 >
                   Hide Answers
                 </Button>
@@ -445,17 +449,19 @@ export function TestMode({ categoryFilter, onComplete }: TestModeProps) {
                 variant="primary"
                 onClick={handleNextItem}
                 disabled={!showAnswers && currentIndex < questions.length - 1}
-                icon={<ChevronRight size={20} />}
+                icon={<ChevronRight size={18} />}
+                className="text-sm sm:text-base"
               >
-                {currentIndex + 1 >= questions.length ? 'Finish' : 'Next Item'}
+                {currentIndex + 1 >= questions.length ? 'Finish' : 'Next'}
               </Button>
             </div>
           </Card>
 
           {/* Instructions */}
-          <div className="text-center text-sm text-text-secondary">
-            <p className="mb-1">💡 <strong>Tip:</strong> Press Enter to move to the next blank</p>
-            <p>Multiple blanks? Fill each one separately (e.g., "wonton" then "chip")</p>
+          <div className="text-center text-xs sm:text-sm text-text-secondary px-2">
+            <p className="mb-1 hidden sm:block">💡 <strong>Tip:</strong> Press Enter to move to the next blank</p>
+            <p className="hidden sm:block">Multiple blanks? Fill each one separately (e.g., "wonton" then "chip")</p>
+            <p className="sm:hidden">💡 Press Enter for next blank</p>
           </div>
         </motion.div>
       </AnimatePresence>

@@ -95,7 +95,6 @@ export function TestMode({ categoryFilter, onComplete }: TestModeProps) {
   const getContextHint = (question: QuestionItem): string => {
     const context = question.component.underline_text.toLowerCase();
     const category = question.category.toLowerCase();
-    const itemName = question.itemName.toLowerCase();
     
     // Check for specific patterns FIRST (most specific to least specific)
     
